@@ -12,7 +12,7 @@
 <title>Jenn's Birthday Trip · June 2027</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 <header class="hero">
@@ -22,7 +22,7 @@
     <h1>Jennifer's Birthday Trip</h1>
     <p class="lede">Dublin · Ashford Castle · London · Champagne · Nice</p>
     <p class="bday">🎂 Birthday: <b>Monday, June 7, 2027</b> at Ashford Castle <span class="badge booked">✓ Booked</span></p>
-    <p class="checked">Checked {{CHECKED}} · prices for 2 adults · only Ashford is booked</p>
+    <p class="checked">Checked {{CHECKED}} · prices for 2 adults · Ashford and flights booked</p>
   </div>
 </header>
 
@@ -42,7 +42,7 @@
 <section id="plan">
   <p class="kicker">Final plan · 3-2-3-2-3</p>
   <h2>Day by day</h2>
-  <p class="muted">Ashford is booked. Everything else is <b>not booked yet</b>; see the booking checklist below.</p>
+  <p class="muted">Ashford and the transatlantic flights are booked. Everything else is <b>not booked yet</b>; see the booking checklist below.</p>
   <div class="timeline">
 {{CARDS}}
   </div>
@@ -65,18 +65,18 @@
   <p><b>Food:</b> estimate $250–400 a day for two, 11 days ($2,750–4,400). Ashford's package already covers its dinners and breakfasts.
   <b>Car:</b> only for Dublin → Ashford → Knock, an estimate.</p>
   <div class="cabins">
-    <div class="cab"><h3>All in, economy</h3><p class="price">{{ECO_LO}}–{{ECO_HI}}</p><p class="muted">flights, trains, hotels, bags, car and food · $900–2,600 over the $20k benchmark</p></div>
+    <div class="cab"><h3>All in, economy</h3><p class="price">{{ECO_LO}}–{{ECO_HI}}</p><p class="muted">flights, trains, hotels, bags, car and food · about the $20k benchmark in cash ($1,100 under to $500 over), plus 168,000 United miles for the flights</p></div>
   </div>
   <p class="muted"><b>Economy only.</b> Google Flights shows the cheapest fare type and doesn't say whether it's Basic or Standard. Before booking, compare the airline's Standard fare (seat choice, changes, sometimes a bag). If it's only a little more, take it. <b>Trains in first class:</b> Eurostar Plus is £52 more than Standard for two on the 12:31 pm (live), and first class on the 6-hour TGV is about $140 more than second (estimate). Both gaps are small, so the plan uses first.</p>
-  <p class="muted">Ways to trim back under $20k: The College Green Hotel or the InterContinental in Dublin, St. Pancras in London, AC Hotel Nice, Standard class on both trains (saves about $210), or TAP via Lisbon ($563 less, but a 9 h 45 min layover).</p>
+  <p class="muted">Ways to trim: The College Green Hotel or the InterContinental in Dublin, St. Pancras in London, AC Hotel Nice, or Standard class on both trains (saves about $210).</p>
   <p class="muted">Sources: Google Flights and Google Hotels (nightly price with fees, 2 adults), hotels' own rates where shown, checked {{CHECKED}}. Eurostar: eurostar.com, live. SNCF Connect blocked automated checks, and June 2027 French domestic fares aren't on sale yet, so TGV fares are estimates. Ashford: booking confirmation. Food, bags and car are estimates.</p>
 </section>
 
 <section id="book" class="panel">
   <h2>Booking checklist</h2>
-  <p class="muted">In this order. Nothing here is booked yet except Ashford.</p>
+  <p class="muted">In this order. Booked so far: Ashford and the transatlantic flights.</p>
   <ol class="check">
-    <li><b>Transatlantic flights</b>: SFO → Dublin Wed Jun 2, Nice → SFO Wed Jun 16, one open-jaw ticket, economy. United via Washington $2,284, or Aer Lingus nonstop out $2,449. Pick a Standard fare over Basic if the gap is small. <a href="{{L_f333}}" target="_blank" rel="noopener">Google Flights</a></li>
+    <li><s>Transatlantic flights</s> <span class="badge booked">✓ Booked</span> United miles, confirmation PBWTSM: SFO → Dublin Wed Jun 2, Nice → SFO Wed Jun 16. Next: pick seats.</li>
     <li><b>Knock → Heathrow</b>, Tue Jun 8, Aer Lingus 1:05 pm, $172. <a href="{{L_noc}}" target="_blank" rel="noopener">Google Flights</a></li>
     <li><b>Hotels: all four are Marriott Bonvoy.</b> Book direct on marriott.com, signed in, so the stay earns points and Platinum Elite perks (third-party sites usually don't). Pick the free-cancellation rate:
       <ul>
@@ -97,7 +97,7 @@
   <h2>Compare: the final plan, 2/2/2 and the previous plan</h2>
   <p class="muted">Same Ashford booking (Jun 6–8) in every version. Economy, 2 adults, Marriott picks, trains in first class.</p>
   <div class="scroll"><table class="cmp">{{ORDERS}}</table></div>
-  <p><b>Why 3-2-3-2-3:</b> no rushed stops, and every move is one simple step (drive, short flight, Eurostar, TGV). It costs about $2,900 more than 2/2/2 and lands just over the $20k benchmark; the trims above bring it back under.</p>
+  <p><b>Why 3-2-3-2-3:</b> no rushed stops, and every move is one simple step (drive, short flight, Eurostar, TGV). With the flights on miles, the cash total is about the $20k benchmark (the comparison columns are priced in cash).</p>
   <p class="muted">Champagne options: La Caserne Chanzy, Autograph Collection (Marriott, Reims) $295/night · luxury: Royal Champagne Hotel &amp; Spa $1,242/night · Domaine Les Crayères $1,282/night.</p>
 </section>
 
@@ -120,19 +120,19 @@
     <p><b>Irish bank holiday:</b> Mon Jun 7, 2027 is the June bank holiday in Ireland, so Dublin and the west are busier that weekend.</p>
     <p><b>Monaco Grand Prix:</b> Jun 4–6, 2027 (<a href="{{L_f1}}" target="_blank" rel="noopener">formula1.com</a>). Over before you reach the Riviera.</p>
     <p><b>Trains:</b> Eurostar for June 2027 is already on sale. French TGV tickets usually open a few months ahead, so book the Reims and Nice legs when they appear.</p>
-    <p><b>Only Ashford is booked.</b> Every other price was checked live on {{CHECKED}} and will move.</p>
+    <p><b>Booked:</b> Ashford and the transatlantic flights (United miles, PBWTSM). Every other price was checked live on {{CHECKED}} and will move.</p>
   </div>
 </section>
 
 </main>
 
 <footer class="foot">
-  <p>Made for Christoph &amp; Jennifer by Hazel · Checked {{CHECKED}} · prices for 2 adults · only Ashford is booked.</p>
+  <p>Made for Christoph &amp; Jennifer by Hazel · Checked {{CHECKED}} · prices for 2 adults · Ashford and flights booked.</p>
   <p>Map: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors · <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>.</p>
   <details><summary>Photo credits (Wikimedia Commons)</summary><ul class="credits">{{CREDITS}}</ul>
   <p class="muted">Real Commons photos of each hotel or its town, resized for the web.</p></details>
 </footer>
 <script src="vendor/leaflet/leaflet.js" defer></script>
-<script src="map.js?v=12" defer></script>
+<script src="map.js?v=13" defer></script>
 </body>
 </html>
