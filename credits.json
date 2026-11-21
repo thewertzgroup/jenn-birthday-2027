@@ -26,15 +26,6 @@
   "w": 1600,
   "h": 1200
  },
- "killarney": {
-  "title": "File:Ladies View in summer, Ring of Kerry, Killarney National Park.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Ladies_View_in_summer,_Ring_of_Kerry,_Killarney_National_Park.jpg",
-  "artist": "Marco Ober",
-  "license": "CC BY-SA 4.0",
-  "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "w": 1600,
-  "h": 847
- },
  "plane": {
   "title": "File:Aer Lingus Airbus A321neo EI-LRA departing Boston August 2025.jpg",
   "page": "https://commons.wikimedia.org/wiki/File:Aer_Lingus_Airbus_A321neo_EI-LRA_departing_Boston_August_2025.jpg",
@@ -80,31 +71,40 @@
   "w": 1600,
   "h": 1200
  },
- "moher": {
-  "title": "File:Ireland Cliffs of Moher BW 2025-09-11 14-27-51.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Ireland_Cliffs_of_Moher_BW_2025-09-11_14-27-51.jpg",
-  "artist": "Berthold Werner",
+ "chanzy": {
+  "title": "File:Reims Facade r\u00e9am\u00e9nag\u00e9e de la Caserne Chanzy.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Reims_Facade_r%C3%A9am%C3%A9nag%C3%A9e_de_la_Caserne_Chanzy.jpg",
+  "artist": "Ours51+",
+  "license": "CC BY-SA 4.0",
+  "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "w": 1008,
+  "h": 756
+ },
+ "reims": {
+  "title": "File:Facade of Reims Cathedral.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Facade_of_Reims_Cathedral.jpg",
+  "artist": "The Crazy Tourist (thecrazytourist.com)",
+  "license": "CC BY-SA 4.0",
+  "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "w": 1067,
+  "h": 1600
+ },
+ "vines": {
+  "title": "File:Vignes (vue sur la Marne depuis Hautvillers.51) Cl.J.Weber04 (23677661455).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Vignes_(vue_sur_la_Marne_depuis_Hautvillers.51)_Cl.J.Weber04_(23677661455).jpg",
+  "artist": "INRA DIST from France",
+  "license": "CC BY 2.0",
+  "licenseurl": "https://creativecommons.org/licenses/by/2.0",
+  "w": 1600,
+  "h": 1200
+ },
+ "tgv": {
+  "title": "File:TGV (Nice Ville) in 2021.01.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:TGV_(Nice_Ville)_in_2021.01.jpg",
+  "artist": "CAPTAIN RAJU",
   "license": "CC BY-SA 4.0",
   "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
   "w": 1600,
-  "h": 900
- },
- "muckross": {
-  "title": "File:Muckross Lake - Killarney National Park 006.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Muckross_Lake_-_Killarney_National_Park_006.jpg",
-  "artist": "Dieglop",
-  "license": "CC BY-SA 4.0",
-  "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "w": 1600,
-  "h": 1067
- },
- "monaco2": {
-  "title": "File:Panorama von Monaco-La Turbie.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Panorama_von_Monaco-La_Turbie.jpg",
-  "artist": "Tobi 87",
-  "license": "CC BY-SA 3.0",
-  "licenseurl": "https://creativecommons.org/licenses/by-sa/3.0",
-  "w": 1600,
-  "h": 818
+  "h": 1200
  }
 }

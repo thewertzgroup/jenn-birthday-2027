@@ -4,38 +4,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<meta name="description" content="Jennifer's birthday trip, May 29 – June 13, 2027: Dublin, Kerry, Ashford Castle, London and the Riviera. Birthday Mon Jun 7 at Ashford Castle.">
+<meta name="description" content="Jennifer's birthday trip, June 3 – 14, 2027: Dublin, Ashford Castle, London, Champagne and Nice. Birthday Mon Jun 7 at Ashford Castle.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Jenn's birthday trip · June 2027">
-<meta property="og:description" content="Dublin · Kerry · Ashford Castle · London · Nice. Birthday Mon Jun 7 at Ashford Castle.">
+<meta property="og:description" content="Dublin · Ashford Castle · London · Champagne · Nice. Birthday Mon Jun 7 at Ashford Castle.">
 <meta property="og:image" content="images/ashford2-1600.jpg">
 <title>Jenn's Birthday Trip · June 2027</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 <header class="hero">
   {{HERO}}
   <div class="hero-text">
-    <p class="kicker">May 29 – June 13, 2027 · a birthday trip for two</p>
+    <p class="kicker">June 3 – 14, 2027 · a birthday trip for two</p>
     <h1>Jennifer's Birthday Trip</h1>
-    <p class="lede">Dublin · Kerry · Ashford Castle · London · Nice</p>
+    <p class="lede">Dublin · Ashford Castle · London · Champagne · Nice</p>
     <p class="bday">🎂 Birthday: <b>Monday, June 7, 2027</b> at Ashford Castle <span class="badge booked">✓ Booked</span></p>
     <p class="checked">Checked {{CHECKED}} · prices for 2 adults · only Ashford is booked</p>
   </div>
 </header>
 
 <nav class="toc" aria-label="Sections">
-  <a href="#plan">Day by day</a><a href="#map">Map</a><a href="#totals">Totals</a><a href="#orders">Other orders</a><a href="#perks">Marriott perks</a><a href="#know">Good to know</a>
+  <a href="#plan">Day by day</a><a href="#map">Map</a><a href="#totals">Totals</a><a href="#orders">Compare</a><a href="#perks">Marriott perks</a><a href="#know">Good to know</a>
 </nav>
 
 <main class="page">
 
 <section class="summary">
-  <div class="stat"><span>14 nights</span><small>in Europe · Sat May 29 – Sun Jun 13</small></div>
+  <div class="stat"><span>10 nights</span><small>in Europe · Fri Jun 4 – Mon Jun 14</small></div>
   <div class="stat"><span>3 countries</span><small>Ireland · UK · France</small></div>
-  <div class="stat"><span>≈ {{TOTAL}}</span><small>flights, hotels &amp; bags, economy, before food &amp; car</small></div>
+  <div class="stat"><span>≈ {{TOTAL}}</span><small>flights, trains, hotels, bags &amp; car, before food</small></div>
   <div class="stat"><span>$20k</span><small>Benchmark</small></div>
 </section>
 
@@ -54,34 +54,34 @@
     <button type="button" id="zoom-ie" aria-pressed="false">Ireland</button>
   </div>
   <div id="leaflet" role="img" aria-label="Map of the trip route"></div>
-  <p class="muted legend"><span class="sw drive"></span> drive &nbsp; <span class="sw fly"></span> fly &nbsp; ★ birthday at Ashford</p>
+  <p class="muted legend"><span class="sw drive"></span> drive &nbsp; <span class="sw fly"></span> fly &nbsp; <span class="sw train"></span> train &nbsp; ★ birthday at Ashford</p>
 </section>
 
 <section id="totals" class="panel">
   <h2>What it costs</h2>
   <table class="tot"><tbody>{{ROWS}}</tbody>
-  <tfoot><tr><td>Flights, hotels and bags (economy)</td><td>{{TOTAL}}</td></tr></tfoot></table>
-  <p><b>Food:</b> estimate $250–400 a day for two (about $3,250–5,200; Ashford's package already covers its dinners and breakfasts).
-  <b>Car:</b> one-way rental Dublin Jun 3 → Knock Jun 8, not priced yet.</p>
+  <tfoot><tr><td>Before food (economy)</td><td>{{TOTAL}}</td></tr></tfoot></table>
+  <p><b>Food:</b> estimate $250–400 a day for two, 8 days ($2,000–3,200). Ashford's package already covers its dinners and breakfasts.
+  <b>Car:</b> only for Dublin → Ashford → Knock, an estimate.</p>
   <div class="cabins">
-    <div class="cab"><h3>All in, economy</h3><p class="price">{{ECO_LO}}–{{ECO_HI}}</p><p class="muted">flights, hotels, bags and food estimate, plus the car · just over the $20k benchmark</p></div>
+    <div class="cab"><h3>All in, economy</h3><p class="price">{{ECO_LO}}–{{ECO_HI}}</p><p class="muted">flights, trains, hotels, bags, car and food · under the $20k benchmark</p></div>
   </div>
-  <p class="muted"><b>Economy only.</b> Google Flights shows the cheapest fare type and doesn't say whether it's Basic or Standard. Before booking, compare the airline's Standard fare (seat choice, changes, sometimes a bag). If it's only a little more, take it. Leaving Sun May 30 is cheaper (a live check found $1,647, BA via Heathrow out and TAP via Lisbon home) but costs a Dublin night.</p>
-  <p class="muted">Ways to trim: The College Green Hotel instead of The Shelbourne saves $516; the InterContinental Dublin saves $1,412; St. Pancras instead of Grosvenor House saves $82.</p>
-  <p class="muted">Sources: Google Flights and Google Hotels (nightly price with fees, 2 adults), hotels' own rates where shown, checked {{CHECKED}}. Ashford: booking confirmation. Food is an estimate.</p>
+  <p class="muted"><b>Economy only.</b> Google Flights shows the cheapest fare type and doesn't say whether it's Basic or Standard. Before booking, compare the airline's Standard fare (seat choice, changes, sometimes a bag). If it's only a little more, take it. <b>Trains in first class:</b> Eurostar Plus is £108 more than Standard for two on the 11:31 am (live), and first class on the 6-hour TGV is about $140 more than second (estimate). Both gaps are small, so the plan uses first.</p>
+  <p class="muted">Ways to trim: Standard class on both trains saves about $280; TAP via Lisbon saves $101 but takes 20 h. Best single add-on: a third night in Nice, about $580 for the hotel plus food (that return date wasn't priced).</p>
+  <p class="muted">Sources: Google Flights and Google Hotels (nightly price with fees, 2 adults), hotels' own rates where shown, checked {{CHECKED}}. Eurostar: eurostar.com, live. SNCF Connect blocked automated checks, and June 2027 French domestic fares aren't on sale yet, so TGV fares are estimates. Ashford: booking confirmation. Food, bags and car are estimates.</p>
 </section>
 
 <section id="orders" class="panel">
-  <h2>Other orders, compared</h2>
-  <p class="muted">Same Ashford booking (Jun 6–8) in every version. Economy, 2 adults, Marriott picks (Shelbourne, Grosvenor House, Le Méridien Nice, La Caserne Chanzy in Reims at $295/night). Bags, food and car are left out so the versions compare fairly.</p>
+  <h2>Compare: 2/2/2, 3/3/3 and the previous plan</h2>
+  <p class="muted">Same Ashford booking (Jun 6–8) in every version. Economy, 2 adults, Marriott picks. Trains in first class. The 3/3/3 version leaves Wed Jun 2 (United via Washington, 1:10 pm → Dublin 10:40 am), takes the Eurostar on Fri Jun 11 and the TGV to Nice on Sun Jun 13, and flies home Wed Jun 16.</p>
   <div class="scroll"><table class="cmp">{{ORDERS}}</table></div>
-  <p><b>Pick:</b> keep <b>Ireland → London → Nice</b>. It has the fewest awkward moves and the lowest cost per night. London first only looks cheaper because it's 1–3 nights shorter and drops Kerry, and it means an early drive from Ashford to Dublin on Jun 8. If Champagne is a must, the last column fits best: one night in Reims in place of one Nice night costs about the same ($372 less before trains, about $90 more once they are added), but it means three moves in three days.</p>
-  <p class="muted">Champagne options: La Caserne Chanzy Hotel &amp; Spa, Autograph Collection (Marriott, Reims) $295/night · luxury: Royal Champagne Hotel &amp; Spa $1,242/night · Domaine Les Crayères $1,282/night. Train fares are estimates and weren't checked live. Paris → Nice by TGV takes about 6 hours, so the plan uses an easyJet flight from Orly ($150 for two on Jun 11).</p>
+  <p><b>Pick: 2/2/2.</b> It's the only version under $20k, every move is one simple step (drive, short flight, Eurostar, TGV), and no stop is a single night. 3/3/3 is more relaxed but about $3,000 more, and over the benchmark. If you want one extra night, add it in Nice.</p>
+  <p class="muted">Champagne options: La Caserne Chanzy, Autograph Collection (Marriott, Reims) $295/night · luxury: Royal Champagne Hotel &amp; Spa $1,242/night · Domaine Les Crayères $1,282/night.</p>
 </section>
 
 <section id="perks" class="panel perks">
   <h2>Marriott Platinum Elite</h2>
-  <p>Christoph is Lifetime Platinum Elite. At the Marriott picks (The Shelbourne, Grosvenor House, Le Méridien Nice) that usually means:</p>
+  <p>Christoph is Lifetime Platinum Elite. At the Marriott picks (The Shelbourne, Grosvenor House, La Caserne Chanzy, Le Méridien Nice) that usually means:</p>
   <ul>
     <li>A room upgrade at check-in when one is available, sometimes to a suite.</li>
     <li>Executive lounge access where the hotel has one (Grosvenor House says it's free for Platinum), otherwise a welcome gift that is often breakfast, depending on the brand.</li>
@@ -91,12 +91,13 @@
 </section>
 
 <section id="know" class="panel know">
-  {{PIC:ashford|Ashford Castle from Lough Corrib}}
+  {{PIC:vines|Champagne vineyards above the Marne at Hautvillers}}
   <div>
     <h2>Good to know</h2>
     <p><b>Why Ashford, not Adare:</b> Adare Manor's main house and spa are closed Apr 30 – Sep 27, 2027 to get ready for the Ryder Cup (<a href="{{L_lhw}}" target="_blank" rel="noopener">notice</a>), so the birthday moved to Ashford, with its spa open.</p>
-    <p><b>Irish bank holiday:</b> Mon Jun 7, 2027 is the June bank holiday in Ireland, so Kerry and the west are busier that weekend.</p>
+    <p><b>Irish bank holiday:</b> Mon Jun 7, 2027 is the June bank holiday in Ireland, so Dublin and the west are busier that weekend.</p>
     <p><b>Monaco Grand Prix:</b> Jun 4–6, 2027 (<a href="{{L_f1}}" target="_blank" rel="noopener">formula1.com</a>). Over before you reach the Riviera.</p>
+    <p><b>Trains:</b> Eurostar for June 2027 is already on sale. French TGV tickets usually open a few months ahead, so book the Reims and Nice legs when they appear.</p>
     <p><b>Only Ashford is booked.</b> Every other price was checked live on {{CHECKED}} and will move.</p>
   </div>
 </section>
@@ -110,6 +111,6 @@
   <p class="muted">Real Commons photos of each hotel or its town, resized for the web.</p></details>
 </footer>
 <script src="vendor/leaflet/leaflet.js" defer></script>
-<script src="map.js?v=9" defer></script>
+<script src="map.js?v=10" defer></script>
 </body>
 </html>

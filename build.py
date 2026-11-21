@@ -6,14 +6,17 @@ CRED = json.load(open('credits.json'))
 CHECKED = 'Nov 21, 2026'
 GF = 'https://www.google.com/travel/flights/search?tfs={}&curr=USD&hl=en'
 L = {
- 'oj_eco': GF.format('CBwQAhoeEgoyMDI3LTA1LTI5agcIARIDU0ZPcgcIARIDRFVCGh4SCjIwMjctMDYtMTNqBwgBEgNOQ0VyBwgBEgNTRk9AAUABSAFwAYIBCwj___________8BmAEB'),
  'noc': GF.format('CBwQAhoeEgoyMDI3LTA2LTA4agcIARIDTk9DcgcIARIDTEhSQAFAAUgBcAGCAQsI____________AZgBAg'),
- 'lonnce': 'https://www.google.com/travel/flights?hl=en&curr=USD&q=one%20way%20flights%20from%20London%20to%20NCE%20on%202027-06-10%202%20adults',
+ 'f222': 'https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI3LTA2LTAzagcIARIDU0ZPcgcIARIDRFVCGh4SCjIwMjctMDYtMTRqBwgBEgNOQ0VyBwgBEgNTRk9AAUABSAFwAYIBCwj___________8BmAEB&curr=USD&hl=en',
+ 'f333': 'https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI3LTA2LTAyagcIARIDU0ZPcgcIARIDRFVCGh4SCjIwMjctMDYtMTZqBwgBEgNOQ0VyBwgBEgNTRk9AAUABSAFwAYIBCwj___________8BmAEB&curr=USD&hl=en',
+ 'es10': 'https://www.eurostar.com/search/uk-en?adult=2&origin=7015400&destination=8727100&outbound=2027-06-10',
+ 'es11': 'https://www.eurostar.com/search/uk-en?adult=2&origin=7015400&destination=8727100&outbound=2027-06-11',
+ 'sncf': 'https://www.sncf-connect.com/en-en/train/route/reims/nice',
+ 'chanzy': 'https://www.marriott.com/en-us/hotels/rheak-la-caserne-chanzy-hotel-and-spa-autograph-collection/overview/',
+ 'royalch': 'https://royalchampagne.com/',
  'shel': 'https://www.marriott.com/en-us/hotels/dubdt-the-shelbourne-autograph-collection/overview/',
  'cgreen': 'https://www.marriott.com/en-us/hotels/dubcg-the-college-green-hotel-dublin-autograph-collection/overview/',
  'icdub': 'https://www.ihg.com/intercontinental/hotels/us/en/dublin/dblic/hoteldetail',
- 'aghadoe': 'https://www.aghadoeheights.com/',
- 'kpark': 'https://www.killarneyparkhotel.ie/',
  'ashford': 'https://ashfordcastle.com/',
  'ashspa': 'https://ashfordcastle.com/wellness-and-spa',
  'grosv': 'https://www.marriott.com/en-us/hotels/longh-jw-marriott-grosvenor-house-london/overview/',
@@ -34,35 +37,39 @@ def pic(key, alt, cls='', eager=False, sizes='(min-width: 900px) 50vw, 100vw'):
 
 # ---------- itinerary ----------
 DAYS = [
- dict(date='Sat May 29', place='Fly SFO → Dublin', img='plane', alt='Aer Lingus Airbus A321neo',
-      body='Aer Lingus nonstop, 5:35 pm, lands Dublin 11:40 am Sunday. Open-jaw ticket: home from Nice on Sun Jun 13 (the Nice → SFO leg connects).',
-      price='$2,037 economy', sub='Both of you, Google Flights, booked as two one-way tickets ($2,315 on one Aer Lingus ticket) · checked bag not included: about $55 each out and $28–50 each home · cheapest May 29 option $1,790 (American, 1 stop)',
-      links=[(L['oj_eco'],'Economy fares')]),
- dict(date='Sun May 30 – Thu Jun 3', place='Dublin · 4 nights', img='shelbourne', alt='The Shelbourne, St Stephen\'s Green, Dublin', img2='dublin', alt2="Ha'penny Bridge, Dublin",
-      body='Marriott pick: <b>The Shelbourne, Autograph Collection</b>, on St Stephen\'s Green, a short walk to Grafton Street and Trinity College. Platinum perks can apply (see below).',
-      price='$2,716', sub='$679/night · Google Hotels · cheaper Marriott: The College Green Hotel, Autograph Collection, $550/night ($2,200) · alt: InterContinental Dublin $326/night ($1,304)',
+ dict(date='Thu Jun 3', place='Fly SFO → Dublin', img='plane', alt='Airliner on approach',
+      body='Porter via Toronto, 1:20 pm, lands Dublin 11:30 am Friday (14 h 10 min). One open-jaw ticket: in to Dublin, home from Nice on Mon Jun 14.',
+      price='$1,802 economy', sub='Round trip for two, Google Flights · Aer Lingus nonstop $2,729 · cheapest $1,701 (TAP via Lisbon, 20 h) · San Jose and Oakland cost more ($2,222+) · checked bags not included, estimate below',
+      links=[(L['f222'],'Economy fares')]),
+ dict(date='Fri Jun 4 – Sun Jun 6', place='Dublin · 2 nights', img='shelbourne', alt="The Shelbourne, St Stephen's Green, Dublin", img2='dublin', alt2="Ha'penny Bridge, Dublin",
+      body="Marriott pick: <b>The Shelbourne, Autograph Collection</b>, on St Stephen's Green, a short walk to Grafton Street and Trinity College. Platinum perks can apply (see below).",
+      price='$1,824', sub='$912/night · Google Hotels · cheaper Marriott: The College Green Hotel, Autograph Collection · alt: InterContinental Dublin',
       links=[(L['shel'],'The Shelbourne'),(L['cgreen'],'College Green'),(L['icdub'],'InterContinental')]),
- dict(date='Thu Jun 3 – Sun Jun 6', place='Killarney & Kerry · 3 nights', img='muckross', alt='Muckross Lake, Killarney National Park', img2='killarney', alt2='Ladies View, Ring of Kerry',
-      body='Pick up the rental car in Dublin and drive about 3.5 h to Killarney (lunch stop at Kilkenny or the Rock of Cashel). Two full days for the Ring of Kerry, the Gap of Dunloe, Muckross House and the lakes. No Marriott hotels in Kerry. Pick: <b>Aghadoe Heights Hotel &amp; Spa</b>, lake views, breakfast included.',
-      price='$1,191', sub='$397/night B&amp;B · Google Hotels (hotel\'s own rate) · alt: The Killarney Park $646/night ($1,938) · The Europe Hotel &amp; Resort $521/night',
-      links=[(L['aghadoe'],'Aghadoe Heights'),(L['kpark'],'The Killarney Park')]),
- dict(date='Sun Jun 6', place='Drive up the Wild Atlantic Way', img='moher', alt='Cliffs of Moher, County Clare',
-      body='Killarney → Tarbert car ferry → Cliffs of Moher and the Burren → Cong. About 3.5–4 h of driving plus stops. Ashford check-in is from 3 pm.',
-      price='Car', sub='One-way rental Dublin → Knock (or Shannon) not priced yet', links=[]),
+ dict(date='Sun Jun 6', place='Drive to Ashford', img=None,
+      body='Pick up a one-way rental car in Dublin and drive about 3 h to Cong. Check-in is from 3 pm. The car is only for the two transfers: Dublin → Ashford, then Ashford → Knock airport on Jun 8.',
+      price='≈ $350', sub='Estimate: one-way rental with drop fee, plus fuel. Not priced live. A private driver costs more.', links=[]),
  dict(date='Sun Jun 6 – Tue Jun 8', place='Ashford Castle · 2 nights · her birthday', img='ashford2', alt='Ashford Castle, Cong, County Mayo', img2='ashford', alt2='Ashford Castle from Lough Corrib', booked=True,
       body=('Junior Stateroom on the <b>A Taste of Ireland</b> package: a five-course dinner in the George V Dining Room, an Irish dinner in The Dungeon, afternoon tea, and breakfast both mornings. '
             'Birthday <b>Mon Jun 7</b> at the castle. The Spa is open daily 8 am–7 pm (treatments 9:30 am–6 pm).'
             '<span class="okline">Booked · deposit paid · free cancellation until May 23, 2027.</span>'),
       price='€7,120 (~$7,825)', sub='Total for two nights, taxes included', links=[(L['ashford'],'Ashford Castle'),(L['ashspa'],'The Spa')]),
  dict(date='Tue Jun 8 – Thu Jun 10', place='Knock → London · 2 nights', img='grosvenor', alt='Grosvenor House on Park Lane, London', img2='ic-parklane', alt2='InterContinental London Park Lane',
-      body='Drive 45 min to Ireland West Airport Knock and drop the car. Aer Lingus 1:05 pm → Heathrow, 2:30 pm. Marriott pick: <b>JW Marriott Grosvenor House</b> on Park Lane, facing Hyde Park; the hotel says its Executive Lounge is free for Platinum members.',
-      price='$172 + $1,062', sub='Flight $172 for two (Shannon → Heathrow is $138–158 but about 2 h further) · hotel $531/night, Google Hotels · alts: St. Pancras London, Autograph Collection $490/night · The London EDITION $820/night · InterContinental Park Lane $702/night',
+      body='Drive 50 min to Ireland West Airport Knock and drop the car. Aer Lingus 1:05 pm → Heathrow 2:30 pm. Marriott pick: <b>JW Marriott Grosvenor House</b> on Park Lane, facing Hyde Park. The hotel says its Executive Lounge is free for Platinum members.',
+      price='$172 + $1,054', sub='Flight $172 for two (Dublin → Heathrow $101–150, Ryanair Knock → Stansted $108) · hotel $527/night, Google Hotels · alt: InterContinental Park Lane',
       links=[(L['noc'],'Knock → LHR'),(L['grosv'],'Grosvenor House'),(L['icpl'],'InterContinental')]),
- dict(date='Thu Jun 10 – Sun Jun 13', place='London → Nice · 3 nights on the Riviera', img='nice', alt='Promenade des Anglais, Nice', img2='monaco2', alt2='Monaco from La Turbie',
-      body='BA from London City 1:40 pm → Nice 4:40 pm. Marriott pick: <b>Le Méridien Nice</b> on the Promenade des Anglais, 15 min from the airport for the flight home. Monaco is 25 min by train for a day trip. The Grand Prix (Jun 4–6) is over by then.',
-      price='$249 + $1,776', sub='Flight $249 for two (easyJet Gatwick $235–256, BA Heathrow 4:20 pm $290) · hotel $592/night, Google Hotels · alts: Le Méridien Beach Plaza, Monaco, $631/night · AC Hotel Nice $598/night · Le Negresco $969/night',
-      links=[(L['lonnce'],'London → Nice'),(L['lmnice'],'Le Méridien Nice'),(L['lmbp'],'Beach Plaza Monaco'),(L['negresco'],'Le Negresco')]),
- dict(date='Sun Jun 13', place='Fly Nice → SFO', img=None, body='Return leg of the open-jaw ticket (one connection).', price='included', sub='in the round-trip fare above', links=[]),
+ dict(date='Thu Jun 10 – Sat Jun 12', place='Eurostar → Champagne · 2 nights in Reims', img='reims', alt='Reims Cathedral', img2='chanzy', alt2='La Caserne Chanzy, Reims',
+      body=('<b>Eurostar 11:31 am</b> St Pancras → Paris Nord 2:59 pm, then a 5-minute walk to Paris Est and the TGV to Reims (about 45 min). '
+            'Marriott pick: <b>La Caserne Chanzy Hotel &amp; Spa, Autograph Collection</b>, a converted fire station facing the cathedral, with a spa. '
+            'Fri Jun 11 is for the champagne houses: cellars in Reims, or the train to Épernay (about 25 min) for the Avenue de Champagne.'),
+      price='$378 + ≈$100 + $590', sub='Eurostar Plus £288 for two, live on eurostar.com (Standard £180, Premier £660) · Paris → Reims TGV 1st class ≈ $100, estimate · hotel $295/night, Google Hotels · luxury alt: Royal Champagne Hotel &amp; Spa $1,242/night',
+      links=[(L['es10'],'Eurostar Jun 10'),(L['chanzy'],'La Caserne Chanzy'),(L['royalch'],'Royal Champagne')]),
+ dict(date='Sat Jun 12 – Mon Jun 14', place='TGV → Nice · 2 nights on the Riviera', img='nice', alt='Promenade des Anglais, Nice', img2='tgv', alt2='TGV at Nice-Ville',
+      body=('Train all the way: Reims → Paris Est (45 min), metro to Gare de Lyon, then a direct <b>TGV INOUI to Nice</b> (about 5 h 40 min). Door to door is about 7–8 hours. '
+            'There is no direct train from Champagne-Ardenne TGV or Marne-la-Vallée to Nice; those routes change once or twice too. '
+            'Marriott pick: <b>Le Méridien Nice</b> on the Promenade des Anglais, 15 min from the airport. Monaco is 25 min by local train.'),
+      price='≈$400 + $1,188', sub='TGV 1st class for two ≈ $400, estimate (2nd class ≈ $260). June 2027 French domestic fares aren\'t on sale yet · hotel $594/night, Google Hotels · alts: Le Méridien Beach Plaza Monaco, AC Hotel Nice, Le Negresco',
+      links=[(L['sncf'],'SNCF Connect'),(L['lmnice'],'Le Méridien Nice'),(L['lmbp'],'Beach Plaza Monaco'),(L['negresco'],'Le Negresco')]),
+ dict(date='Mon Jun 14', place='Fly Nice → SFO', img=None, body='Return leg of the open-jaw ticket.', price='included', sub='in the round-trip fare above', links=[]),
 ]
 def card(d):
     cls = ' star' if d.get('booked') else ''
@@ -77,32 +84,29 @@ def card(d):
     return (f'<article class="day{cls}">{media}<div class="day-body"><p class="date">{d["date"]}</p>{badge}<h3>{d["place"]}</h3>'
             f'<p>{d["body"]}</p><p class="price">{d["price"]}<small>{d["sub"]}</small></p><div class="links">{links}</div></div></article>')
 
-ITEMS = [('Flights SFO → Dublin / Nice → SFO (economy)', 2037, ''), ('Dublin, 4 nights · The Shelbourne', 2716, ''),
-         ('Killarney, 3 nights · Aghadoe Heights (B&amp;B)', 1191, ''), ('Ashford Castle, 2 nights · booked (dinners included)', 7825, 'booked'),
-         ('Knock → Heathrow', 172, ''), ('London, 2 nights · Grosvenor House', 1062, ''), ('London → Nice', 249, ''),
-         ('Nice, 3 nights · Le Méridien Nice', 1776, ''), ('Checked bags, 1 each, all four flights (estimate)', 410, '')]
+ITEMS = [('Flights SFO → Dublin / Nice → SFO (economy)', 1802, ''), ('Dublin, 2 nights · The Shelbourne', 1824, ''),
+         ('Car Dublin → Ashford → Knock (estimate)', 350, 'est'), ('Ashford Castle, 2 nights · booked (dinners included)', 7825, 'booked'),
+         ('Knock → Heathrow', 172, ''), ('London, 2 nights · Grosvenor House', 1054, ''),
+         ('Eurostar Plus London → Paris', 378, ''), ('TGV Paris → Reims, 1st class (estimate)', 100, 'est'), ('Reims, 2 nights · La Caserne Chanzy', 590, ''),
+         ('TGV Reims → Paris → Nice, 1st class (estimate)', 400, 'est'), ('Nice, 2 nights · Le Méridien Nice', 1188, ''),
+         ('Checked bags, 1 each, on the flights (estimate)', 320, 'est')]
 TOT = sum(v for _, v, _ in ITEMS)
 rows = ''.join(f'<tr class="{c}"><td>{k}</td><td>${v:,}</td></tr>' for k, v, c in ITEMS)
-eco_lo, eco_hi = TOT + 3250, TOT + 5200
+eco_lo, eco_hi = TOT + 2000, TOT + 3200
 
 # ---------- other orders (economy, flights + hotels, 2 adults) ----------
-OCOLS = ['Ireland → London → Nice <span class="badge booked">current</span>', 'London first, 3 + 3', 'London first, 2 + 2',
-         'London first + Champagne', 'Ireland → London → Champagne → Nice']
+OCOLS = ['2 / 2 / 2 <span class="badge booked">main plan</span>', '3 / 3 / 3', 'Previous plan: Kerry, London, Nice']
 OROWS = [
- ('Leave SFO', ['Sat May 29', 'Sun May 30', 'Tue Jun 1', 'Tue Jun 1', 'Sat May 29']),
- ('Nights in Europe', ['14', '13', '11', '11', '14']),
- ('Stops', ['Dublin 4 · Kerry 3 · Ashford 2 · London 2 · Nice 3', 'London 3 · Dublin 3 · Ashford 2 · Nice 5', 'London 2 · Dublin 2 · Ashford 2 · Nice 5',
-            'London 2 · Dublin 2 · Ashford 2 · Reims 2 · Nice 3', 'Dublin 4 · Kerry 3 · Ashford 2 · London 2 · Reims 1 · Nice 2']),
- ('Flights to Europe and home', ['$2,037 SFO–Dublin, Nice–SFO', '$1,960 SFO–Heathrow nonstop, Nice–SFO', '$1,796 SFO–Heathrow, Nice–SFO (nonstop $2,232)', '$1,796', '$2,037']),
- ('Flights inside Europe', ['$421 Knock–Heathrow, London–Nice', '$399 London–Dublin, Dublin–Nice', '$409 London–Dublin, Dublin–Nice',
-                            '$455 London–Dublin, Dublin–Paris CDG, Paris–Nice', '$322 Knock–Heathrow, Paris Orly–Nice']),
- ('Hotels', ['$14,570', '$14,182', '$12,986', '$12,967', '$14,297']),
- ('Flights + hotels', ['<b>$17,028</b>', '<b>$16,541</b>', '<b>$15,191</b>', '<b>$15,218</b>', '<b>$16,656</b>']),
- ('Not in that total', ['Car Dublin → Knock, 5 days', 'Car or rail + taxi to Ashford and back', 'Car or rail + taxi to Ashford and back',
-                        'Same, plus TGV CDG → Reims (about $80, estimate)', 'Car, plus Eurostar + train to Reims and back to Paris (about $460, estimate)']),
- ('Per night in Europe', ['$1,216', '$1,272', '$1,381', '$1,384', '$1,222']),
- ('Awkward legs', ['None: one drive west, two short flights', 'Ashford → Dublin airport by 9 am on Jun 8 for the 11 am Nice flight', 'Same early drive on Jun 8',
-                   'Ashford → Dublin airport Jun 8, then the train to Reims', '3 moves in 3 days: Eurostar, train to Reims, train to Paris + flight to Nice']),
+ ('Dates', ['Thu Jun 3 – Mon Jun 14', 'Wed Jun 2 – Wed Jun 16', 'Sat May 29 – Sun Jun 13']),
+ ('Nights in Europe', ['10', '13', '14']),
+ ('Stops', ['Dublin 2 · Ashford 2 · London 2 · Reims 2 · Nice 2', 'Dublin 3 · Ashford 2 · London 3 · Reims 2 · Nice 3', 'Dublin 4 · Kerry 3 · Ashford 2 · London 2 · Nice 3']),
+ ('Flights', ['$1,974: Porter via Toronto $1,802 + Knock–Heathrow $172', '$2,456: United via Washington $2,284 + Knock–Heathrow $172', '$2,458: Aer Lingus nonstop $2,037 + two short flights $421']),
+ ('Trains', ['$878: Eurostar Plus $378 (live) + TGV 1st ≈ $500 (estimate)', '$773: Eurostar Plus $273 (live) + TGV 1st ≈ $500 (estimate)', '–']),
+ ('Hotels', ['$12,481', '$14,265', '$14,570']),
+ ('Bags + car (estimates)', ['$670', '$670', '$410 + car (not priced)']),
+ ('Food (estimate)', ['$2,000–3,200 (8 days)', '$2,750–4,400 (11 days)', '$3,250–5,200']),
+ ('All in', ['<b>$18,003–19,203</b>', '<b>$20,914–22,564</b>', '<b>$20,688–22,638</b> + car']),
+ ('vs $20k', ['Under, by $800–2,000', 'Over, by $900–2,600', 'Over, plus the car']),
 ]
 orders = '<tr><th></th>' + ''.join(f'<th>{c}</th>' for c in OCOLS) + '</tr>' + ''.join(
   f'<tr><th>{k}</th>' + ''.join(f'<td>{v}</td>' for v in vals) + '</tr>' for k, vals in OROWS)
