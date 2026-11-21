@@ -151,5 +151,50 @@
   "licenseurl": "https://creativecommons.org/licenses/by/2.0",
   "w": 1600,
   "h": 1067
+ },
+ "shelbourne": {
+  "title": "File:Shelbourne Hotel, Dublin, October 2010 (01).JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Shelbourne_Hotel,_Dublin,_October_2010_(01).JPG",
+  "artist": "Ardfern",
+  "license": "CC BY-SA 3.0",
+  "licenseurl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "w": 1600,
+  "h": 1067
+ },
+ "grosvenor": {
+  "title": "File:Grosvenor House Hotel, Park Lane.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Grosvenor_House_Hotel,_Park_Lane.jpg",
+  "artist": "Dhowes9",
+  "license": "CC BY-SA 3.0",
+  "licenseurl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "w": 1600,
+  "h": 1200
+ },
+ "pdg": {
+  "title": "File:Hôtel Prince de Galles, 33 avenue George-V, Paris 8e 2-1.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_Prince_de_Galles,_33_avenue_George-V,_Paris_8e_2-1.jpg",
+  "artist": "Polymagou",
+  "license": "CC BY-SA 4.0",
+  "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "w": 1600,
+  "h": 1067
+ },
+ "mce": {
+  "title": "File:Paris Marriott Hotel Champs-Elysees, 25 July 2010.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Paris_Marriott_Hotel_Champs-Elysees,_25_July_2010.jpg",
+  "artist": "sacratomato_hr",
+  "license": "CC BY-SA 2.0",
+  "licenseurl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "w": 1600,
+  "h": 1063
+ },
+ "lmbp": {
+  "title": "File:Le Meridien Beach Plaza, Monaco - vue sur mer.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Le_Meridien_Beach_Plaza,_Monaco_-_vue_sur_mer.jpg",
+  "artist": "Benoît Prieur",
+  "license": "CC0",
+  "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "w": 1600,
+  "h": 1242
  }
 }

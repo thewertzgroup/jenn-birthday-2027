@@ -101,3 +101,30 @@ section{scroll-margin-top:3.5rem}
 .map-toggle{flex-wrap:wrap}.map-toggle .ghost{margin-left:auto;background:transparent}
 .hero-img{object-position:50% 30%}
 #leaflet.far .lbl.minor{display:none}
+.opt4{display:grid;background:var(--bg-el);border:2px solid #34d399;border-radius:1rem;overflow:hidden;margin:1rem 0;box-shadow:0 0 0 4px rgba(52,211,153,.1)}
+@media(min-width:860px){.opt4{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.opt4 .cover{height:100%;aspect-ratio:auto}}
+.opt4 .cover{width:100%;aspect-ratio:16/10;object-fit:cover}
+.tag.green{background:#34d399}
+.mini{width:100%;border-collapse:collapse;font-size:.9rem;margin:.2rem 0 .7rem;font-variant-numeric:tabular-nums}
+.mini td{padding:.32rem 0;border-bottom:1px solid var(--border);vertical-align:top}
+.mini td:last-child{text-align:right;white-space:nowrap;padding-left:.6rem;font-weight:650}
+.mrows{display:grid;gap:.9rem;margin:1rem 0}
+.mrow{background:var(--bg-el);border:1px solid var(--border);border-radius:1rem;overflow:hidden;display:grid}
+@media(min-width:800px){.mrow{grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr)}.m-media{height:100%}}
+.m-media{margin:0;aspect-ratio:16/9}
+.m-media img{width:100%;height:100%;object-fit:cover}
+.m-body{padding:.9rem 1rem}
+.m-body h3{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.m-cols{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:.4rem 0 .6rem}
+.m-col{background:var(--bg);border:1px solid var(--border);border-radius:.6rem;padding:.55rem .65rem;display:grid;gap:.1rem;align-content:start}
+.m-col.mar{border-color:rgba(167,139,250,.6)}
+.m-col.none{opacity:.7}
+.m-lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700}
+.m-price{font-size:1.15rem;font-weight:750;color:#fff}
+.m-col small{color:var(--muted);font-size:.8rem}
+a.plain{color:var(--accent);text-decoration:underline}
+.delta{font-size:.78rem;font-weight:700;padding:.1rem .5rem;border-radius:999px;background:var(--bg);border:1px solid var(--border);color:var(--muted)}
+.delta.up{color:#fca5a5;border-color:rgba(248,113,113,.5)}
+.mtotal,.perks{margin-top:.9rem}
+.perks ul{margin:.2rem 0 .6rem;padding-left:1.1rem;display:grid;gap:.25rem}
+.tot td:last-child{white-space:nowrap;padding-left:.6rem}

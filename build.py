@@ -110,6 +110,108 @@ credits = ''.join(
   f'<a href="{E(v["licenseurl"])}" target="_blank" rel="noopener">{E(v["license"])}</a></li>' for v in CRED.values())
 
 page = open('template.html').read()
+
+# ---------- Option 4: Ashford for the birthday ----------
+ASH2 = 'https://secure.ashfordcastle.com/convert/site/Ashford%20Castle/en/results.php?currency=USD&partya=2&checkin=2027-06-06&nights=2'
+opt4_total = total - 16485 - 1703 + 7143.50 + 700
+OPT4 = f"""<article class="opt4">
+  {pic('ashford', 'Ashford Castle from Lough Corrib', 'cover', sizes='(min-width: 860px) 45vw, 100vw')}
+  <div class="opt-body">
+    <span class="tag green">Lower-cost pick · under the $20k benchmark</span>
+    <h3>4 · Ashford Castle for the birthday (Jun 6–8), no Adare</h3>
+    <p>Drive from Killarney to Ashford on Sun Jun 6 (about 3.5 h), two nights, and her birthday on Mon Jun 7 at the castle. Tue Jun 8: drive to Knock (about 45 min), Aer Lingus 1:05 pm to Heathrow ($172 for two), and two nights in London instead of one.</p>
+    <p class="muted">For Jun 6–8 only the Junior Stateroom and up are free both nights; the standard and lake rooms are taken on Jun 6–7. Prices include taxes, for 2 adults, from Ashford's own booking engine:</p>
+    <table class="mini"><tbody>
+      <tr><td>Junior Stateroom · B&amp;B</td><td>$7,143.50</td></tr>
+      <tr><td>Junior Stateroom · Gourmet Getaway (two nights, one five-course dinner)</td><td>$7,456.72</td></tr>
+      <tr><td>Junior Stateroom · Taste of Ireland (two dinners + afternoon tea)</td><td>$7,824.88</td></tr>
+      <tr><td>Boathouse · B&amp;B / Gourmet two nights</td><td>$7,901.81 / $8,215.03</td></tr>
+      <tr><td>Suite · B&amp;B / Gourmet two nights</td><td>$9,891.00 / $10,204.22</td></tr>
+    </tbody></table>
+    <p class="muted">The Spa is open daily 8 am–7 pm (treatments 9:30 am–6 pm) per Ashford's site; the B&amp;B rate includes access to Éalú. Extra London night (Jun 8): InterContinental Park Lane ~$700 (Google Hotels).</p>
+    <p class="price">≈ ${int(opt4_total+0.5):,}<small>before food &amp; car, with the Junior Stateroom B&amp;B · ~$17,500–19,750 all-in (estimate) · Gourmet dinner adds $313</small></p>
+    <div class="links">{a(ASH2, 'Check Ashford Jun 6–8 live')}{a(GF['noc'], 'Knock → LHR fares')}</div>
+  </div>
+</article>"""
+
+# ---------- Marriott option ----------
+MLINK = {
+ 'shel':'https://www.marriott.com/en-us/hotels/dubdt-the-shelbourne-autograph-collection/overview/',
+ 'grosv':'https://www.marriott.com/en-us/hotels/longh-jw-marriott-grosvenor-house-london/overview/',
+ 'lmnice':'https://www.marriott.com/en-us/hotels/ncemd-le-meridien-nice/overview/',
+ 'lmbp':'https://www.marriott.com/en-us/hotels/mcmmd-le-meridien-beach-plaza/overview/',
+ 'mce':'https://www.marriott.com/en-us/hotels/pardt-paris-marriott-champs-elysees-hotel/overview/',
+ 'pdg':'https://www.marriott.com/en-us/hotels/parlc-prince-de-galles-a-luxury-collection-hotel-paris/overview/',
+}
+MROWS = [
+ dict(stop='Dublin · May 30 – Jun 1 · 2 nights', img='shelbourne', alt='The Shelbourne, St Stephen\'s Green, Dublin',
+      cur=('InterContinental Dublin', '$574', '$287/night · Google Hotels today: $294/night'),
+      mar=('The Shelbourne, Autograph Collection', '$1,366', '$683/night', MLINK['shel']),
+      note='On St Stephen\'s Green, walk to Grafton Street. Marriott says room renovations run until May 2027. Cheaper Marriott: The College Green Hotel, Autograph Collection, $541/night ($1,082).', d=792),
+ dict(stop='Kilkenny · Jun 1 · 1 night', img=None, cur=('Pembroke Hotel', '$120', ''), mar=None,
+      note='No Marriott hotel in or near Kilkenny. Keep the Pembroke.', d=0),
+ dict(stop='Killarney & Kerry · Jun 2–6 · 4 nights', img=None, cur=('The Killarney Park', '$1,308', ''), mar=None,
+      note='No Marriott hotel in Killarney or Kerry. Keep The Killarney Park.', d=0),
+ dict(stop='Adare Manor · Ashford Castle', img=None, cur=('Unchanged', '$18,188', ''), mar=None,
+      note='Not Marriott; stays as planned.', d=0),
+ dict(stop='London · Jun 9 · 1 night', img='grosvenor', alt='Grosvenor House on Park Lane, London',
+      cur=('InterContinental Park Lane', '~$349', 'Google Hotels today: $770/night'),
+      mar=('JW Marriott Grosvenor House London', '$517', 'Park Lane, facing Hyde Park', MLINK['grosv']),
+      note='Same street as the current pick. The hotel says its Executive Lounge is complimentary for Platinum members. Others: St. Pancras London, Autograph Collection $486 · London Marriott Hotel Park Lane $600 · The London EDITION $911.', d=168),
+ dict(stop='Riviera · Jun 10 · 1 night', img='lmbp', alt='Sea view from Le Méridien Beach Plaza, Monaco',
+      cur=('Anantara Plaza Nice', '~$256', 'Google Hotels today: suites only, ~$1,421'),
+      mar=('Le Méridien Nice', '$567', '1 Promenade des Anglais (4-star)', MLINK['lmnice']),
+      note='Easiest for the 8:10 am flight to Paris. In Monaco: Le Méridien Beach Plaza $575 (the current Monaco pick, Monte-Carlo Bay, shows $668 on Google Hotels today). AC Hotel Nice $583.', d=311,
+      extra=MLINK['lmbp']),
+ dict(stop='Paris · Jun 11–13 · 2 nights', img='mce', alt='Paris Marriott Champs-Élysées',
+      cur=('Castille Paris', '$728', '$364/night · Google Hotels today: $707/night'),
+      mar=('Paris Marriott Champs-Élysées', '$1,802', '$901/night', MLINK['mce']),
+      note='On the Champs-Élysées. Splurge: Prince de Galles, a Luxury Collection Hotel, $1,292/night ($2,584, +$782). W Paris – Opéra and Renaissance Paris Vendôme showed no rates for these dates.', d=1074,
+      extra2=MLINK['pdg']),
+]
+mcards = []
+for r in MROWS:
+    media = f'<figure class="m-media">{pic(r["img"], r["alt"], sizes="(min-width: 800px) 30vw, 100vw")}</figure>' if r.get('img') else ''
+    cur = r['cur']
+    curhtml = f'<div class="m-col"><span class="m-lbl">Current</span><b>{cur[0]}</b><span class="m-price">{cur[1]}</span><small>{cur[2]}</small></div>'
+    if r['mar']:
+        m = r['mar']
+        marhtml = f'<div class="m-col mar"><span class="m-lbl">Marriott pick</span><b>{a(m[3], m[0], "plain")}</b><span class="m-price">{m[1]}</span><small>{m[2]}</small></div>'
+        delta = f'<span class="delta up">+${r["d"]:,}</span>'
+    else:
+        marhtml = '<div class="m-col mar none"><span class="m-lbl">Marriott pick</span><b>None nearby</b><span class="m-price">—</span></div>'
+        delta = '<span class="delta">no change</span>'
+    links = ''
+    if r.get('extra'): links += a(r['extra'], 'Le Méridien Beach Plaza')
+    if r.get('extra2'): links += a(r['extra2'], 'Prince de Galles')
+    if links: links = f'<div class="links">{links}</div>'
+    mcards.append(f'<article class="mrow">{media}<div class="m-body"><h3>{r["stop"]} {delta}</h3><div class="m-cols">{curhtml}{marhtml}</div><p class="muted">{r["note"]}</p>{links}</div></article>')
+mdiff = sum(r['d'] for r in MROWS)
+MARRIOTT = f"""<section id="marriott">
+  <p class="kicker">For comparison · Marriott Bonvoy</p>
+  <h2>The Marriott option</h2>
+  <p>Same Version B dates and route, with a Marriott hotel wherever there's a good one. Adare and Ashford stay as they are.</p>
+  <div class="mrows">{''.join(mcards)}</div>
+  <div class="panel mtotal">
+    <table class="tot"><tbody>
+      <tr><td>Version B as planned</td><td>{'$'+format(total, ',')}</td></tr>
+      <tr><td>Marriott swaps (Dublin, London, Nice, Paris)</td><td>+${mdiff:,}</td></tr>
+    </tbody><tfoot><tr><td>Marriott version, before food &amp; car</td><td>${total+mdiff:,}</td></tr></tfoot></table>
+    <p>That's about <b>${total+mdiff-20000:,}</b> over the $20k benchmark before food. With Prince de Galles in Paris: ${total+mdiff+782:,}.</p>
+    <p class="muted">Rechecked on the same site today, the current hotels in London, Nice and Paris have gone up a lot (see each card). On today's prices the four Marriott hotels cost about the same as the current four ($4,252 vs about $4,193).</p>
+  </div>
+  <div class="panel perks">
+    <h3>What Lifetime Platinum Elite usually adds</h3>
+    <ul>
+      <li>A room upgrade at check-in when one is available, sometimes to a suite.</li>
+      <li>Executive lounge access where the hotel has one; otherwise a welcome gift that is often breakfast, depending on the brand.</li>
+      <li>4 pm late checkout on request, depending on availability.</li>
+      <li>None of this is guaranteed; it depends on the hotel and the day.</li>
+    </ul>
+    <p class="muted">Prices: Google Hotels, Nov 21, 2026, nightly price with fees for 2 adults (a third-party site's headline rate). Marriott.com blocked our automated check, so Bonvoy member rates and points prices aren't shown.</p>
+  </div>
+</section>"""
+page = page.replace('{{OPT4}}', OPT4).replace('{{MARRIOTT}}', MARRIOTT)
 for k, v in dict(CARDS=cards, ROWS=rows, TOTAL=f'${total:,}', CREDITS=credits).items():
     page = page.replace('{{'+k+'}}', v)
 for k, v in GF.items(): page = page.replace('{{GF_'+k+'}}', E(v))
