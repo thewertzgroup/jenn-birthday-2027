@@ -131,3 +131,10 @@ a.plain{color:var(--accent);text-decoration:underline}
 .badge.booked{background:#34d399;color:#06281c}
 .okline{display:block;margin-top:.55rem;padding:.45rem .6rem;border-left:3px solid #34d399;background:rgba(52,211,153,.1);border-radius:.3rem;font-size:.92rem;font-weight:600}
 .tot tr.booked td{color:#6ee7b7}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.8rem 0}
+.cmp{border-collapse:collapse;min-width:820px;font-size:.88rem}
+.cmp th,.cmp td{padding:.5rem .6rem;border-bottom:1px solid rgba(148,163,184,.2);text-align:left;vertical-align:top}
+.cmp tr:first-child th{font-size:.9rem;color:#e2e8f0}
+.cmp th:first-child{position:sticky;left:0;background:var(--bg-el);color:#94a3b8;font-weight:600;min-width:7.5rem}
+.cmp td:nth-child(2){background:rgba(52,211,153,.07)}
+#orders{min-width:0;max-width:100%}.scroll{max-width:100%}

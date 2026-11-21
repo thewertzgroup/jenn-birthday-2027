@@ -7,8 +7,6 @@ CHECKED = 'Nov 21, 2026'
 GF = 'https://www.google.com/travel/flights/search?tfs={}&curr=USD&hl=en'
 L = {
  'oj_eco': GF.format('CBwQAhoeEgoyMDI3LTA1LTI5agcIARIDU0ZPcgcIARIDRFVCGh4SCjIwMjctMDYtMTNqBwgBEgNOQ0VyBwgBEgNTRk9AAUABSAFwAYIBCwj___________8BmAEB'),
- 'oj_prem': GF.format('CBwQAhoeEgoyMDI3LTA1LTI5agcIARIDU0ZPcgcIARIDRFVCGh4SCjIwMjctMDYtMTNqBwgBEgNOQ0VyBwgBEgNTRk9AAUABSAJwAYIBCwj___________8BmAEB'),
- 'oj_biz': GF.format('CBwQAhoeEgoyMDI3LTA1LTI5agcIARIDU0ZPcgcIARIDRFVCGh4SCjIwMjctMDYtMTNqBwgBEgNOQ0VyBwgBEgNTRk9AAUABSANwAYIBCwj___________8BmAEB'),
  'noc': GF.format('CBwQAhoeEgoyMDI3LTA2LTA4agcIARIDTk9DcgcIARIDTEhSQAFAAUgBcAGCAQsI____________AZgBAg'),
  'lonnce': 'https://www.google.com/travel/flights?hl=en&curr=USD&q=one%20way%20flights%20from%20London%20to%20NCE%20on%202027-06-10%202%20adults',
  'shel': 'https://www.marriott.com/en-us/hotels/dubdt-the-shelbourne-autograph-collection/overview/',
@@ -38,8 +36,8 @@ def pic(key, alt, cls='', eager=False, sizes='(min-width: 900px) 50vw, 100vw'):
 DAYS = [
  dict(date='Sat May 29', place='Fly SFO → Dublin', img='plane', alt='Aer Lingus Airbus A321neo',
       body='Aer Lingus nonstop, 5:35 pm, lands Dublin 11:40 am Sunday. Open-jaw ticket: home from Nice on Sun Jun 13 (the Nice → SFO leg connects).',
-      price='$2,038 economy', sub='Round trip for two, Google Flights · premium economy $4,573 (BA via Heathrow, mixed cabins) · business $14,057 (Aer Lingus nonstop out; cheapest business $13,066, American via Chicago)',
-      links=[(L['oj_eco'],'Economy'),(L['oj_prem'],'Premium'),(L['oj_biz'],'Business')]),
+      price='$2,037 economy', sub='Both of you, Google Flights, booked as two one-way tickets ($2,315 on one Aer Lingus ticket) · checked bag not included: about $55 each out and $28–50 each home · cheapest May 29 option $1,790 (American, 1 stop)',
+      links=[(L['oj_eco'],'Economy fares')]),
  dict(date='Sun May 30 – Thu Jun 3', place='Dublin · 4 nights', img='shelbourne', alt='The Shelbourne, St Stephen\'s Green, Dublin', img2='dublin', alt2="Ha'penny Bridge, Dublin",
       body='Marriott pick: <b>The Shelbourne, Autograph Collection</b>, on St Stephen\'s Green, a short walk to Grafton Street and Trinity College. Platinum perks can apply (see below).',
       price='$2,716', sub='$679/night · Google Hotels · cheaper Marriott: The College Green Hotel, Autograph Collection, $550/night ($2,200) · alt: InterContinental Dublin $326/night ($1,304)',
@@ -79,14 +77,35 @@ def card(d):
     return (f'<article class="day{cls}">{media}<div class="day-body"><p class="date">{d["date"]}</p>{badge}<h3>{d["place"]}</h3>'
             f'<p>{d["body"]}</p><p class="price">{d["price"]}<small>{d["sub"]}</small></p><div class="links">{links}</div></div></article>')
 
-ITEMS = [('Flights SFO → Dublin / Nice → SFO (economy)', 2038, ''), ('Dublin, 4 nights · The Shelbourne', 2716, ''),
+ITEMS = [('Flights SFO → Dublin / Nice → SFO (economy)', 2037, ''), ('Dublin, 4 nights · The Shelbourne', 2716, ''),
          ('Killarney, 3 nights · Aghadoe Heights (B&amp;B)', 1191, ''), ('Ashford Castle, 2 nights · booked (dinners included)', 7825, 'booked'),
          ('Knock → Heathrow', 172, ''), ('London, 2 nights · Grosvenor House', 1062, ''), ('London → Nice', 249, ''),
-         ('Nice, 3 nights · Le Méridien Nice', 1776, '')]
+         ('Nice, 3 nights · Le Méridien Nice', 1776, ''), ('Checked bags, 1 each, all four flights (estimate)', 410, '')]
 TOT = sum(v for _, v, _ in ITEMS)
 rows = ''.join(f'<tr class="{c}"><td>{k}</td><td>${v:,}</td></tr>' for k, v, c in ITEMS)
 eco_lo, eco_hi = TOT + 3250, TOT + 5200
-prem = TOT + (4573 - 2038); biz = TOT + (14057 - 2038)
+
+# ---------- other orders (economy, flights + hotels, 2 adults) ----------
+OCOLS = ['Ireland → London → Nice <span class="badge booked">current</span>', 'London first, 3 + 3', 'London first, 2 + 2',
+         'London first + Champagne', 'Ireland → London → Champagne → Nice']
+OROWS = [
+ ('Leave SFO', ['Sat May 29', 'Sun May 30', 'Tue Jun 1', 'Tue Jun 1', 'Sat May 29']),
+ ('Nights in Europe', ['14', '13', '11', '11', '14']),
+ ('Stops', ['Dublin 4 · Kerry 3 · Ashford 2 · London 2 · Nice 3', 'London 3 · Dublin 3 · Ashford 2 · Nice 5', 'London 2 · Dublin 2 · Ashford 2 · Nice 5',
+            'London 2 · Dublin 2 · Ashford 2 · Reims 2 · Nice 3', 'Dublin 4 · Kerry 3 · Ashford 2 · London 2 · Reims 1 · Nice 2']),
+ ('Flights to Europe and home', ['$2,037 SFO–Dublin, Nice–SFO', '$1,960 SFO–Heathrow nonstop, Nice–SFO', '$1,796 SFO–Heathrow, Nice–SFO (nonstop $2,232)', '$1,796', '$2,037']),
+ ('Flights inside Europe', ['$421 Knock–Heathrow, London–Nice', '$399 London–Dublin, Dublin–Nice', '$409 London–Dublin, Dublin–Nice',
+                            '$455 London–Dublin, Dublin–Paris CDG, Paris–Nice', '$322 Knock–Heathrow, Paris Orly–Nice']),
+ ('Hotels', ['$14,570', '$14,182', '$12,986', '$12,967', '$14,297']),
+ ('Flights + hotels', ['<b>$17,028</b>', '<b>$16,541</b>', '<b>$15,191</b>', '<b>$15,218</b>', '<b>$16,656</b>']),
+ ('Not in that total', ['Car Dublin → Knock, 5 days', 'Car or rail + taxi to Ashford and back', 'Car or rail + taxi to Ashford and back',
+                        'Same, plus TGV CDG → Reims (about $80, estimate)', 'Car, plus Eurostar + train to Reims and back to Paris (about $460, estimate)']),
+ ('Per night in Europe', ['$1,216', '$1,272', '$1,381', '$1,384', '$1,222']),
+ ('Awkward legs', ['None: one drive west, two short flights', 'Ashford → Dublin airport by 9 am on Jun 8 for the 11 am Nice flight', 'Same early drive on Jun 8',
+                   'Ashford → Dublin airport Jun 8, then the train to Reims', '3 moves in 3 days: Eurostar, train to Reims, train to Paris + flight to Nice']),
+]
+orders = '<tr><th></th>' + ''.join(f'<th>{c}</th>' for c in OCOLS) + '</tr>' + ''.join(
+  f'<tr><th>{k}</th>' + ''.join(f'<td>{v}</td>' for v in vals) + '</tr>' for k, vals in OROWS)
 
 credits = ''.join(
   f'<li><a href="{E(v["page"])}" target="_blank" rel="noopener">{E(v["title"][5:])}</a> by {E(v["artist"])} · '
@@ -94,8 +113,7 @@ credits = ''.join(
 
 page = open('template.html').read()
 rep = dict(CARDS='\n'.join(card(d) for d in DAYS), ROWS=rows, TOTAL=f'${TOT:,}', CREDITS=credits, CHECKED=CHECKED,
-           ECO_LO=f'${eco_lo:,}', ECO_HI=f'${eco_hi:,}', PREM=f'${prem:,}', BIZ=f'${biz:,}',
-           BIZ_LO=f'${biz+3250:,}', BIZ_HI=f'${biz+5200:,}', PREM_LO=f'${prem+3250:,}', PREM_HI=f'${prem+5200:,}')
+           ECO_LO=f'${eco_lo:,}', ECO_HI=f'${eco_hi:,}', ORDERS=orders)
 for k, v in rep.items(): page = page.replace('{{'+k+'}}', v)
 for k, v in L.items(): page = page.replace('{{L_'+k+'}}', E(v))
 page = re.sub(r'\{\{PIC:([\w-]+)\|([^}]*)\}\}', lambda m: pic(m.group(1), m.group(2), 'cover'), page)
@@ -104,4 +122,4 @@ assert '{{' not in page, re.findall(r'\{\{[^}]*\}\}', page)
 # keep credits to images actually used
 used = set(re.findall(r'images/([\w-]+)-800\.jpg', page))
 open('index.html', 'w').write(page)
-print('built', TOT, 'eco', eco_lo, eco_hi, 'prem', prem, 'biz', biz, 'unused credits', sorted(set(CRED) - used))
+print('built', TOT, 'eco', eco_lo, eco_hi, 'unused credits', sorted(set(CRED) - used))
