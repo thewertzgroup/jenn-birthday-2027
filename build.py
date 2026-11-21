@@ -43,8 +43,9 @@ DAYS = [
       links=[(L['f333'],'Economy fares')]),
  dict(date='Thu Jun 3 – Sun Jun 6', place='Dublin · 3 nights', img='shelbourne', alt="The Shelbourne, St Stephen's Green, Dublin", img2='dublin', alt2="Ha'penny Bridge, Dublin",
       body="Marriott pick: <b>The Shelbourne, Autograph Collection</b>, on St Stephen's Green, a short walk to Grafton Street and Trinity College. Platinum perks can apply (see below).",
-      price='$2,574', sub='$858/night · Google Hotels (a rate with free cancellation until Jun 1 was listed) · cheaper Marriott: The College Green Hotel · alt: InterContinental Dublin',
-      links=[(L['shel'],'The Shelbourne'),(L['cgreen'],'College Green'),(L['icdub'],'InterContinental')]),
+      price='$2,574', sub='$858/night · Google Hotels (a rate with free cancellation until Jun 1 was listed) · Marriott alternate: The College Green Hotel, Autograph Collection · non-Marriott alternate: InterContinental Dublin (IHG)',
+      brand='Autograph Collection',
+      links=[(L['shel'],'The Shelbourne'),(L['cgreen'],'College Green'),(L['icdub'],'InterContinental (alt)')]),
  dict(date='Sun Jun 6', place='Drive to Ashford', img=None,
       body='Pick up a one-way rental car in Dublin and drive about 3 h to Cong. Check-in is from 3 pm. The car is only for the two transfers: Dublin → Ashford, then Ashford → Knock airport on Jun 8.',
       price='≈ $350', sub='Estimate: one-way rental with drop fee, plus fuel. Not priced live.', links=[]),
@@ -55,21 +56,24 @@ DAYS = [
       price='€7,120 (~$7,825)', sub='Total for two nights, taxes included', links=[(L['ashford'],'Ashford Castle'),(L['ashspa'],'The Spa')]),
  dict(date='Tue Jun 8 – Fri Jun 11', place='Knock → London · 3 nights', img='grosvenor', alt='Grosvenor House on Park Lane, London', img2='ic-parklane', alt2='InterContinental London Park Lane',
       body='Drive 50 min to Ireland West Airport Knock and drop the car. Aer Lingus 1:05 pm → Heathrow 2:30 pm. Marriott pick: <b>JW Marriott Grosvenor House</b> on Park Lane, facing Hyde Park. The hotel says its Executive Lounge is free for Platinum members.',
-      price='$172 + $1,542', sub='Flight $172 for two (Ryanair Knock → Stansted $108) · hotel $514/night, Google Hotels (a rate with free cancellation until Jun 7 was listed) · alt: InterContinental Park Lane',
-      links=[(L['noc'],'Knock → LHR'),(L['grosv'],'Grosvenor House'),(L['icpl'],'InterContinental')]),
+      price='$172 + $1,542', sub='Flight $172 for two (Ryanair Knock → Stansted $108) · hotel $514/night, Google Hotels (a rate with free cancellation until Jun 7 was listed) · Marriott alternates: St. Pancras London, Autograph Collection · The London EDITION · non-Marriott alternate: InterContinental Park Lane (IHG)',
+      brand='JW Marriott',
+      links=[(L['noc'],'Knock → LHR'),(L['grosv'],'Grosvenor House'),(L['icpl'],'InterContinental (alt)')]),
  dict(date='Fri Jun 11 – Sun Jun 13', place='Eurostar → Champagne · 2 nights in Reims', img='reims', alt='Reims Cathedral', img2='chanzy', alt2='La Caserne Chanzy, Reims',
       body=('<b>Eurostar 12:31 pm</b> St Pancras → Paris Nord 3:59 pm, then a 5-minute walk to Paris Est and the TGV to Reims (about 45 min). '
             'Marriott pick: <b>La Caserne Chanzy Hotel &amp; Spa, Autograph Collection</b>, a converted fire station facing the cathedral, with a spa. '
             'Sat Jun 12 is for the champagne houses: cellars in Reims, or the train to Épernay (about 25 min) for the Avenue de Champagne.'),
-      price='$273 + ≈$100 + $590', sub='Eurostar Plus £208 for two, live on eurostar.com (Standard £156, Premier £660) · Paris → Reims TGV 1st class ≈ $100, estimate · hotel $295/night, Google Hotels (free cancellation listed) · luxury alt: Royal Champagne Hotel &amp; Spa $1,242/night',
-      links=[(L['es11'],'Eurostar Jun 11'),(L['chanzy'],'La Caserne Chanzy'),(L['royalch'],'Royal Champagne')]),
+      price='$273 + ≈$100 + $590', sub='Eurostar Plus £208 for two, live on eurostar.com (Standard £156, Premier £660) · Paris → Reims TGV 1st class ≈ $100, estimate · hotel $295/night, Google Hotels (free cancellation listed) · non-Marriott luxury alternate: Royal Champagne Hotel &amp; Spa $1,242/night (no Marriott luxury hotel in Champagne)',
+      brand='Autograph Collection',
+      links=[(L['es11'],'Eurostar Jun 11'),(L['chanzy'],'La Caserne Chanzy'),(L['royalch'],'Royal Champagne (alt)')]),
  dict(date='Sun Jun 13 – Wed Jun 16', place='TGV → Nice · 3 nights on the Riviera', img='nice', alt='Promenade des Anglais, Nice', img2='tgv', alt2='TGV at Nice-Ville',
       body=('Train all the way: Reims → Paris Est (45 min), metro to Gare de Lyon, then a direct <b>TGV INOUI to Nice</b> (about 5 h 40 min). Door to door is about 7–8 hours. '
             'There is no direct train from Champagne-Ardenne TGV or Marne-la-Vallée to Nice; those routes change once or twice too. '
             '<b>First class is recommended</b> for this long leg: it\'s about $140 more for two (estimate). '
             'Marriott pick: <b>Le Méridien Nice</b> on the Promenade des Anglais, 15 min from the airport. Monaco is 25 min by local train.'),
-      price='≈$400 + $1,734', sub='TGV 1st class for two ≈ $400, estimate (2nd ≈ $260). June 2027 French domestic fares aren\'t on sale yet · hotel $578/night, Google Hotels (a rate with free cancellation until Jun 10 was listed) · alts: Le Méridien Beach Plaza Monaco, AC Hotel Nice, Le Negresco',
-      links=[(L['sncf'],'SNCF Connect'),(L['lmnice'],'Le Méridien Nice'),(L['lmbp'],'Beach Plaza Monaco'),(L['negresco'],'Le Negresco')]),
+      price='≈$400 + $1,734', sub='TGV 1st class for two ≈ $400, estimate (2nd ≈ $260). June 2027 French domestic fares aren\'t on sale yet · hotel $578/night, Google Hotels (a rate with free cancellation until Jun 10 was listed) · Marriott alternates: Le Méridien Beach Plaza, Monaco · AC Hotel Nice · non-Marriott alternate: Le Negresco',
+      brand='Le Méridien',
+      links=[(L['sncf'],'SNCF Connect'),(L['lmnice'],'Le Méridien Nice'),(L['lmbp'],'Beach Plaza Monaco'),(L['negresco'],'Le Negresco (alt)')]),
  dict(date='Wed Jun 16', place='Fly Nice → SFO', img=None, body='Return leg of the open-jaw ticket.', price='included', sub='in the round-trip fare above', links=[], nob=True),
 ]
 def card(d):
@@ -81,6 +85,7 @@ def card(d):
             media += f'<div class="inset">{pic(d["img2"], d["alt2"], sizes="200px")}</div>'
         media += '</figure>'
     badge = '<span class="badge booked">✓ Booked</span> <span class="badge">🎂 Birthday · Mon Jun 7</span>' if d.get('booked') else ('' if d.get('nob') else '<span class="badge todo">Not booked yet</span>')
+    if d.get('brand'): badge += f'<span class="badge mar">Marriott Bonvoy · {d["brand"]}</span>'
     links = ''.join(a(h, t) for h, t in d['links'])
     return (f'<article class="day{cls}">{media}<div class="day-body"><p class="date">{d["date"]}</p>{badge}<h3>{d["place"]}</h3>'
             f'<p>{d["body"]}</p><p class="price">{d["price"]}<small>{d["sub"]}</small></p><div class="links">{links}</div></div></article>')
