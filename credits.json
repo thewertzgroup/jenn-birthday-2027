@@ -116,15 +116,6 @@
   "w": 1600,
   "h": 1055
  },
- "monaco2": {
-  "title": "File:Panorama von Monaco-La Turbie.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Panorama_von_Monaco-La_Turbie.jpg",
-  "artist": "Tobi 87",
-  "license": "CC BY-SA 3.0",
-  "licenseurl": "https://creativecommons.org/licenses/by-sa/3.0",
-  "w": 1600,
-  "h": 818
- },
  "monaco3": {
   "title": "File:Panorama Monaco 2007.jpg",
   "page": "https://commons.wikimedia.org/wiki/File:Panorama_Monaco_2007.jpg",
@@ -134,15 +125,6 @@
   "w": 1600,
   "h": 1200
  },
- "fairmont": {
-  "title": "File:Fairmont Hotel Monaco IMG 1016.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Fairmont_Hotel_Monaco_IMG_1016.jpg",
-  "artist": "Alexander Migl",
-  "license": "CC BY-SA 4.0",
-  "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "w": 1600,
-  "h": 1067
- },
  "mc-bay": {
   "title": "File:MONTE-CARLO BAY HOTEL ^ RESORT 1 - panoramio.jpg",
   "page": "https://commons.wikimedia.org/wiki/File:MONTE-CARLO_BAY_HOTEL_%5E_RESORT_1_-_panoramio.jpg",
@@ -151,24 +133,6 @@
   "licenseurl": "https://creativecommons.org/licenses/by/3.0",
   "w": 1600,
   "h": 1200
- },
- "massena": {
-  "title": "File:Nizza-Place Masséna of Nice-4070873.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Nizza-Place_Mass%C3%A9na_of_Nice-4070873.jpg",
-  "artist": "Ermell",
-  "license": "CC BY-SA 4.0",
-  "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "w": 1600,
-  "h": 1200
- },
- "knock": {
-  "title": "File:Knock Airport control tower and arrivals (2068c).jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Knock_Airport_control_tower_and_arrivals_(2068c).jpg",
-  "artist": "Djm-leighpark",
-  "license": "CC BY-SA 4.0",
-  "licenseurl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "w": 1600,
-  "h": 900
  },
  "paris": {
   "title": "File:Place Vendome 01.jpg",
