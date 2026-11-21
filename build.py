@@ -58,8 +58,8 @@ DAYS = [
             '<span class="okline">Booked · deposit paid · free cancellation until May 23, 2027.</span>'),
       price='€7,120 (~$7,825)', sub='Total for two nights, taxes included', links=[(L['ashford'],'Ashford Castle'),(L['ashspa'],'The Spa')]),
  dict(date='Tue Jun 8 – Fri Jun 11', place='Knock → London · 3 nights', img='grosvenor', alt='Grosvenor House on Park Lane, London', img2='ic-parklane', alt2='InterContinental London Park Lane',
-      body='Drive 50 min to Ireland West Airport Knock and drop the car. Aer Lingus 1:05 pm → Heathrow 2:30 pm. <b>JW Marriott Grosvenor House</b> on Park Lane, facing Hyde Park. The hotel says its Executive Lounge is free for Platinum members.<span class="okline">Hotel booked · confirmation 73083147 · free cancellation until 11:59 pm London time, Jun 7, 2027 (£632 fee after).</span>',
-      price='$172 + £1,919 (~$2,518)', sub='Flight $172 for two, not booked yet (Ryanair Knock → Stansted $108) · hotel £1,919.40 for 3 nights, Superior 1 King, Member Flexible rate, may be charged at the hotel · non-Marriott alternate: InterContinental Park Lane (IHG)', hotelbooked=True,
+      body='Drive 50 min to Ireland West Airport Knock and drop the car. <b>Aer Lingus EI 916</b> 1:05 pm → Heathrow 2:30 pm, seats 7C and 7B, a 20 kg checked bag each included. <b>JW Marriott Grosvenor House</b> on Park Lane, facing Hyde Park. The hotel says its Executive Lounge is free for Platinum members.<span class="okline">Flight booked · Aer Lingus reference 2CUUB6 · Plus fare · €10 per person airport fee paid at Knock.</span><span class="okline">Hotel booked · confirmation 73083147 · free cancellation until 11:59 pm London time, Jun 7, 2027 (£632 fee after).</span>',
+      price='€251 (~$275) + £1,919 (~$2,518)', sub='Flight €250.76 for two, plus €20 airport fee at Knock · hotel £1,919.40 for 3 nights, Superior 1 King, Member Flexible rate, may be charged at the hotel · non-Marriott alternate: InterContinental Park Lane (IHG)', hotelbooked=True, travelbooked=True,
       brand='JW Marriott',
       links=[(L['noc'],'Knock → LHR'),(L['grosv'],'Grosvenor House'),(L['icpl'],'InterContinental (alt)')]),
  dict(date='Fri Jun 11 – Sun Jun 13', place='Eurostar → Champagne · 2 nights in Reims', img='reims', alt='Reims Cathedral', img2='chanzy', alt2='La Caserne Chanzy, Reims',
@@ -90,7 +90,7 @@ def card(d):
             media += f'<div class="inset">{pic(d["img2"], d["alt2"], sizes="200px")}</div>'
         media += '</figure>'
     badge = ('<span class="badge booked">✓ Booked</span>' + ('' if d.get('bday') is False else ' <span class="badge">🎂 Birthday · Mon Jun 7</span>')) if d.get('booked') else ('' if d.get('nob') or d.get('hotelbooked') else '<span class="badge todo">Not booked yet</span>')
-    if d.get('hotelbooked'): badge += '<span class="badge booked">✓ Hotel booked</span> <span class="badge todo">Travel not booked yet</span>'
+    if d.get('hotelbooked'): badge += '<span class="badge booked">✓ Hotel booked</span> ' + ('<span class="badge booked">✓ Flight booked</span>' if d.get('travelbooked') else '<span class="badge todo">Travel not booked yet</span>')
     if d.get('brand'): badge += f'<span class="badge mar">Marriott Bonvoy · {d["brand"]}</span>'
     links = ''.join(a(h, t) for h, t in d['links'])
     return (f'<article class="day{cls}">{media}<div class="day-body"><p class="date">{d["date"]}</p>{badge}<h3>{d["place"]}</h3>'
@@ -98,10 +98,10 @@ def card(d):
 
 ITEMS = [('Flights SFO → Dublin / Nice → SFO · booked, PBWTSM (168,000 United miles + taxes)', 234, 'booked'), ('Dublin, 3 nights · The Shelbourne · booked, 73079619 (332,000 Bonvoy points)', 0, 'booked'),
          ('Car Dublin → Ashford → Knock (estimate)', 350, 'est'), ('Ashford Castle, 2 nights · booked (dinners included)', 7825, 'booked'),
-         ('Knock → Heathrow', 172, ''), ('United seats, all flights · booked', 123, 'booked'), ('London, 3 nights · Grosvenor House · booked, 73083147 (£1,919.40)', 2518, 'booked'),
+         ('Knock → Heathrow · booked, Aer Lingus 2CUUB6 (€250.76, bags included)', 275, 'booked'), ('Knock airport fee, €10 each, paid at the airport', 22, 'booked'), ('United seats, all flights · booked', 123, 'booked'), ('London, 3 nights · Grosvenor House · booked, 73083147 (£1,919.40)', 2518, 'booked'),
          ('Eurostar Plus London → Paris', 273, ''), ('TGV Paris → Reims, 1st class (estimate)', 100, 'est'), ('Reims, 2 nights · La Caserne Chanzy · booked, 73084366 (€639.20)', 702, 'booked'),
          ('TGV Reims → Paris → Nice, 1st class (estimate)', 400, 'est'), ('Nice, 3 nights · Le Méridien Nice · booked, 73085131 (€1,722.88)', 1892, 'booked'),
-         ('Checked bags, 1 each, on the flights (estimate)', 320, 'est')]
+         ('Checked bags, 1 each, United and SWISS flights (estimate)', 240, 'est')]
 TOT = sum(v for _, v, _ in ITEMS)
 rows = ''.join(f'<tr class="{c}"><td>{k}</td><td>${v:,}</td></tr>' for k, v, c in ITEMS)
 eco_lo, eco_hi = TOT + 2750, TOT + 4400
@@ -112,13 +112,13 @@ OROWS = [
  ('Dates', ['Wed Jun 2 – Wed Jun 16', 'Thu Jun 3 – Mon Jun 14', 'Sat May 29 – Sun Jun 13']),
  ('Nights in Europe', ['13', '10', '14']),
  ('Stops', ['Dublin 3 · Ashford 2 · London 3 · Reims 2 · Nice 3', 'Dublin 2 · Ashford 2 · London 2 · Reims 2 · Nice 2', 'Dublin 4 · Kerry 3 · Ashford 2 · London 2 · Nice 3']),
- ('Flights', ['$529: United miles booking $234 + seats $123 (booked) + Knock–Heathrow $172', '$1,974: Porter via Toronto $1,802 + Knock–Heathrow $172', '$2,458: Aer Lingus nonstop $2,037 + two short flights $421']),
+ ('Flights', ['$654: United miles booking $234 + seats $123 + Aer Lingus Knock–Heathrow $297 incl. airport fee (all booked)', '$1,974: Porter via Toronto $1,802 + Knock–Heathrow $172', '$2,458: Aer Lingus nonstop $2,037 + two short flights $421']),
  ('Trains', ['$773: Eurostar Plus $273 (live) + TGV 1st ≈ $500 (estimate)', '$878: Eurostar Plus $378 (live) + TGV 1st ≈ $500 (estimate)', '–']),
  ('Hotels', ['$12,937 cash + 332,000 Bonvoy points (all booked)', '$12,481', '$14,570']),
- ('Bags + car (estimates)', ['$670', '$670', '$410 + car (not priced)']),
+ ('Bags + car (estimates)', ['$590', '$670', '$410 + car (not priced)']),
  ('Food (estimate)', ['$2,750–4,400 (11 days)', '$2,000–3,200 (8 days)', '$3,250–5,200']),
- ('All in', ['<b>$17,659–19,309</b> + 168,000 miles + 332,000 points', '<b>$18,003–19,203</b>', '<b>$20,688–22,638</b> + car']),
- ('vs $20k', ['Under, by $700–2,300 (cash)', 'Under, by $800–2,000', 'Over, plus the car']),
+ ('All in', ['<b>$17,704–19,354</b> + 168,000 miles + 332,000 points', '<b>$18,003–19,203</b>', '<b>$20,688–22,638</b> + car']),
+ ('vs $20k', ['Under, by $650–2,300 (cash)', 'Under, by $800–2,000', 'Over, plus the car']),
 ]
 orders = '<tr><th></th>' + ''.join(f'<th>{c}</th>' for c in OCOLS) + '</tr>' + ''.join(
   f'<tr><th>{k}</th>' + ''.join(f'<td>{v}</td>' for v in vals) + '</tr>' for k, vals in OROWS)
