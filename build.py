@@ -43,11 +43,12 @@ DAYS = [
             '<span class="okline">Booked with United miles · confirmation PBWTSM · seats not selected yet.</span>'),
       price='168,000 miles + $234', sub='For both of you, both directions, economy, taxes and fees included',
       links=[]),
- dict(date='Thu Jun 3 – Sun Jun 6', place='Dublin · 3 nights', img='shelbourne', alt="The Shelbourne, St Stephen's Green, Dublin", img2='dublin', alt2="Ha'penny Bridge, Dublin",
-      body="Marriott pick: <b>The Shelbourne, Autograph Collection</b>, on St Stephen's Green, a short walk to Grafton Street and Trinity College. Platinum perks can apply (see below).",
-      price='$2,574', sub='$858/night · Google Hotels (a rate with free cancellation until Jun 1 was listed) · Marriott alternate: The College Green Hotel, Autograph Collection · non-Marriott alternate: InterContinental Dublin (IHG)',
+ dict(date='Thu Jun 3 – Sun Jun 6', place='Dublin · 3 nights', img='shelbourne', alt="The Shelbourne, St Stephen's Green, Dublin", img2='dublin', alt2="Ha'penny Bridge, Dublin", booked=True, bday=False,
+      body=("<b>The Shelbourne, Autograph Collection</b>, on St Stephen's Green, a short walk to Grafton Street and Trinity College. Guest room, 1 King. Platinum perks can apply (see below)."
+            '<span class="okline">Booked on Bonvoy points · confirmation 73079619 · free cancellation until 11:59 pm Dublin time, Jun 2, 2027.</span>'),
+      price='332,000 Bonvoy points', sub='$0 cash · 3 nights',
       brand='Autograph Collection',
-      links=[(L['shel'],'The Shelbourne'),(L['cgreen'],'College Green'),(L['icdub'],'InterContinental (alt)')]),
+      links=[(L['shel'],'The Shelbourne')]),
  dict(date='Sun Jun 6', place='Drive to Ashford', img=None,
       body='Pick up a one-way rental car in Dublin and drive about 3 h to Cong. Check-in is from 3 pm. The car is only for the two transfers: Dublin → Ashford, then Ashford → Knock airport on Jun 8.',
       price='≈ $350', sub='Estimate: one-way rental with drop fee, plus fuel. Not priced live.', links=[]),
@@ -92,9 +93,9 @@ def card(d):
     return (f'<article class="day{cls}">{media}<div class="day-body"><p class="date">{d["date"]}</p>{badge}<h3>{d["place"]}</h3>'
             f'<p>{d["body"]}</p><p class="price">{d["price"]}<small>{d["sub"]}</small></p><div class="links">{links}</div></div></article>')
 
-ITEMS = [('Flights SFO → Dublin / Nice → SFO · booked, PBWTSM (168,000 United miles + taxes)', 234, 'booked'), ('Dublin, 3 nights · The Shelbourne', 2574, ''),
+ITEMS = [('Flights SFO → Dublin / Nice → SFO · booked, PBWTSM (168,000 United miles + taxes)', 234, 'booked'), ('Dublin, 3 nights · The Shelbourne · booked, 73079619 (332,000 Bonvoy points)', 0, 'booked'),
          ('Car Dublin → Ashford → Knock (estimate)', 350, 'est'), ('Ashford Castle, 2 nights · booked (dinners included)', 7825, 'booked'),
-         ('Knock → Heathrow', 172, ''), ('London, 3 nights · Grosvenor House', 1542, ''),
+         ('Knock → Heathrow', 172, ''), ('United seats, all flights · booked', 123, 'booked'), ('London, 3 nights · Grosvenor House', 1542, ''),
          ('Eurostar Plus London → Paris', 273, ''), ('TGV Paris → Reims, 1st class (estimate)', 100, 'est'), ('Reims, 2 nights · La Caserne Chanzy', 590, ''),
          ('TGV Reims → Paris → Nice, 1st class (estimate)', 400, 'est'), ('Nice, 3 nights · Le Méridien Nice', 1734, ''),
          ('Checked bags, 1 each, on the flights (estimate)', 320, 'est')]
@@ -108,13 +109,13 @@ OROWS = [
  ('Dates', ['Wed Jun 2 – Wed Jun 16', 'Thu Jun 3 – Mon Jun 14', 'Sat May 29 – Sun Jun 13']),
  ('Nights in Europe', ['13', '10', '14']),
  ('Stops', ['Dublin 3 · Ashford 2 · London 3 · Reims 2 · Nice 3', 'Dublin 2 · Ashford 2 · London 2 · Reims 2 · Nice 2', 'Dublin 4 · Kerry 3 · Ashford 2 · London 2 · Nice 3']),
- ('Flights', ['$406: United miles booking, 168,000 miles + $234 (booked) + Knock–Heathrow $172', '$1,974: Porter via Toronto $1,802 + Knock–Heathrow $172', '$2,458: Aer Lingus nonstop $2,037 + two short flights $421']),
+ ('Flights', ['$529: United miles booking $234 + seats $123 (booked) + Knock–Heathrow $172', '$1,974: Porter via Toronto $1,802 + Knock–Heathrow $172', '$2,458: Aer Lingus nonstop $2,037 + two short flights $421']),
  ('Trains', ['$773: Eurostar Plus $273 (live) + TGV 1st ≈ $500 (estimate)', '$878: Eurostar Plus $378 (live) + TGV 1st ≈ $500 (estimate)', '–']),
- ('Hotels', ['$14,265', '$12,481', '$14,570']),
+ ('Hotels', ['$11,691 cash + 332,000 Bonvoy points (Shelbourne)', '$12,481', '$14,570']),
  ('Bags + car (estimates)', ['$670', '$670', '$410 + car (not priced)']),
  ('Food (estimate)', ['$2,750–4,400 (11 days)', '$2,000–3,200 (8 days)', '$3,250–5,200']),
- ('All in', ['<b>$18,864–20,514</b> + 168,000 miles', '<b>$18,003–19,203</b>', '<b>$20,688–22,638</b> + car']),
- ('vs $20k', ['Under, up to $500 over (cash only)', 'Under, by $800–2,000', 'Over, plus the car']),
+ ('All in', ['<b>$16,413–18,063</b> + 168,000 miles + 332,000 points', '<b>$18,003–19,203</b>', '<b>$20,688–22,638</b> + car']),
+ ('vs $20k', ['Under, by $1,900–3,600 (cash)', 'Under, by $800–2,000', 'Over, plus the car']),
 ]
 orders = '<tr><th></th>' + ''.join(f'<th>{c}</th>' for c in OCOLS) + '</tr>' + ''.join(
   f'<tr><th>{k}</th>' + ''.join(f'<td>{v}</td>' for v in vals) + '</tr>' for k, vals in OROWS)
