@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Jennifer's birthday trip, June 2027: Ireland, London, the Riviera and Paris. Birthday at Adare Manor, Mon Jun 7.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Jenn's birthday trip · June 2027">
+<meta property="og:description" content="Ireland + London + Riviera + Paris. Birthday Mon Jun 7 at Adare Manor.">
+<meta property="og:image" content="images/adare-1600.jpg">
+<title>Jenn's Birthday Trip · June 2027</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  {{HERO}}
+  <div class="hero-text">
+    <p class="kicker">June 2027 · a birthday trip for two</p>
+    <h1>Jennifer's Birthday Trip</h1>
+    <p class="lede">Ireland · London · the Riviera · Paris</p>
+    <p class="bday">🎂 Birthday: <b>Monday, June 7, 2027</b> at Adare Manor</p>
+    <p class="checked">Checked Nov 21, 2026 · prices for 2 adults · nothing booked</p>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#plan">Day by day</a><a href="#map">Map</a><a href="#totals">Totals</a><a href="#options">Options</a><a href="#cabins">Cabins</a><a href="#version-a">Version A</a><a href="#know">Good to know</a>
+</nav>
+
+<main class="page">
+
+<section class="summary">
+  <div class="stat"><span>16 days</span><small>Sat May 29 – Sun Jun 13</small></div>
+  <div class="stat"><span>4 countries</span><small>Ireland · UK · France · Monaco</small></div>
+  <div class="stat"><span>≈ {{TOTAL}}</span><small>before food &amp; car (economy)</small></div>
+  <div class="stat"><span>$20k</span><small>Jenn's benchmark: her Ritz cruise</small></div>
+</section>
+
+<section id="plan">
+  <p class="kicker">Version B · recommended</p>
+  <h2>Day by day, May 29 – June 13</h2>
+  <div class="timeline">
+{{CARDS}}
+  </div>
+</section>
+
+<section id="map" class="panel">
+  <h2>The route</h2>
+  <div class="map-toggle" role="group" aria-label="Which route">
+    <button type="button" data-route="B" aria-pressed="true">Version B</button>
+    <button type="button" data-route="A" aria-pressed="false">Version A</button>
+  </div>
+  <div id="leaflet" role="img" aria-label="Map of the trip route"></div>
+  <p class="muted legend"><span class="sw drive"></span> drive &nbsp; <span class="sw fly"></span> fly &nbsp; ★ birthday night</p>
+</section>
+
+<section id="totals" class="panel">
+  <h2>Version B totals (economy)</h2>
+  <table class="tot"><tbody>{{ROWS}}</tbody>
+  <tfoot><tr><td>Before food and car</td><td>{{TOTAL}}</td></tr></tfoot></table>
+  <p><b>Food:</b> estimate $250–400 a day for two (Adare's package covers most meals on Jun 6–8).</p>
+  <p class="big">All-in estimate ≈ <b>$28,000–$31,000</b> plus the rental car.</p>
+  <p class="muted">That's over Jenn's $20k Ritz-cruise benchmark (her number, not a verified price), almost entirely because of Adare's $16,485. Monaco instead of Nice on Jun 10 adds $43.</p>
+</section>
+
+<section id="options">
+  <p class="kicker">Choose one</p>
+  <h2>The Adare options</h2>
+  <div class="opts">
+    <article class="opt pick">
+      {{PIC:ashford2|Ashford Castle from the northwest}}
+      <div class="opt-body">
+        <span class="tag">Plan above</span>
+        <h3>1 · Two Adare nights + Ashford</h3>
+        <p>Arrive Adare Sun Jun 6, whole birthday there, golf on the 8th, then Ashford Castle for one night.</p>
+        <p class="price">≈ {{TOTAL}}<small>before food &amp; car · ~$28k–31k all-in (estimate)</small></p>
+      </div>
+    </article>
+    <article class="opt">
+      {{PIC:adare2|Adare Manor seen from the golf course}}
+      <div class="opt-body">
+        <h3>2 · Two Adare nights, skip Ashford</h3>
+        <p>Saves $1,703. Fly Shannon → Heathrow Tue Jun 8, 4:55 pm ($158), and use the night for an extra London or Riviera night.</p>
+        <p class="price">≈ $22,700<small>before food &amp; car · ~$26.5k–29k all-in (estimate)</small></p>
+      </div>
+    </article>
+    <article class="opt">
+      {{PIC:ashford|Ashford Castle from Lough Corrib}}
+      <div class="opt-body">
+        <h3>3 · One Adare night + Ashford</h3>
+        <p>Sun Jun 6 only: she wakes up at Adare on her birthday, checks out 10 am, and you drive to Ashford for the birthday night.</p>
+        <p class="price">~$20k–22k<small>rough all-in estimate · not yet priced: a 1-night lodge package and a 2nd Ashford night</small></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="cabins" class="panel">
+  <h2>Cabin comparison · Version B round trip</h2>
+  <div class="cabins">
+    <div class="cab"><h3>Economy</h3><p class="price">$2,038</p><p class="muted">Aer Lingus nonstop SFO–DUB</p>{{BTN_ECO}}</div>
+    <div class="cab"><h3>Premium economy</h3><p class="price">$4,573</p><p class="muted">BA, 1 stop · <b>+~$2,500</b></p>{{BTN_PREM}}</div>
+    <div class="cab"><h3>Business</h3><p class="price">$12,569–13,513</p><p class="muted">Aer Lingus nonstop $13,513 · Alaska/Aer Lingus 1-stop $12,569 · <b>+~$10,000–11,500</b></p>{{BTN_BIZ}}</div>
+  </div>
+</section>
+
+<section id="version-a">
+  <p class="kicker">For comparison</p>
+  <h2>Version A · Wed Jun 2 – Sat Jun 12, no Adare</h2>
+  <div class="va">
+    <figure class="va-pic">{{PIC:negresco|Hotel Le Negresco on the Promenade des Anglais, Nice}}<figcaption>Birthday on the Promenade: Le Negresco, Nice</figcaption></figure>
+    <ol class="va-list">
+      <li><b>Wed Jun 2</b> SFO → Dublin. United 1-stop economy <b>$2,424</b> (Aer Lingus nonstop $2,773 · premium BA $4,531 · business Aer Lingus nonstop $12,577 or TAP 1-stop $8,755). <span class="links">{{A_LINKS}}</span></li>
+      <li><b>Thu Jun 3 – Sat Jun 5</b> Dublin, 2 nights, InterContinental <b>$574</b>.</li>
+      <li><b>Sat Jun 5</b> Aer Lingus Dublin → Nice 7:10 am <b>$405</b>.</li>
+      <li><b>Jun 5 – 8</b> Nice, 3 nights, <b>birthday Mon Jun 7 in Nice</b>. Anantara Plaza $256/night or <a href="{{L_negresco}}" target="_blank" rel="noopener">Le Negresco</a> $281/night.</li>
+      <li><b>Tue Jun 8</b> Monaco, 1 night. <a href="{{L_fairmont}}" target="_blank" rel="noopener">Fairmont Monte Carlo</a> $236 (Monte-Carlo Bay $402).</li>
+      <li><b>Wed Jun 9 – Sat Jun 12</b> Paris, 3 nights, Castille <b>$1,092</b>. Fly Nice → CDG, easyJet $133.</li>
+      <li><b>Sat Jun 12</b> Paris → SFO (open-jaw return).</li>
+    </ol>
+  </div>
+  <p class="note">⚠︎ Date check: the easyJet $133 fare was priced for Thu Jun 10, but Monaco is one night (Jun 8–9) and Paris starts Jun 9. The Nice → Paris flight belongs on Wed Jun 9; that fare hasn't been checked yet.</p>
+  <div class="cabins">
+    <div class="cab"><h3>Economy, all-in</h3><p class="price">~$8,000–10,000</p><p class="muted">≈ $5,600 before food, plus a food estimate</p></div>
+    <div class="cab"><h3>Business, all-in</h3><p class="price">~$18,000–20,000</p><p class="muted">estimate</p></div>
+  </div>
+</section>
+
+<section id="know" class="panel know">
+  {{PIC:monaco3|Monaco harbour with Grand Prix grandstands}}
+  <div>
+    <h2>Good to know</h2>
+    <p><b>Monaco Grand Prix:</b> Jun 4–6, 2027, race Sunday Jun 6 (<a href="{{L_f1}}" target="_blank" rel="noopener">formula1.com</a>; the ACM lists Jun 3–6). No overlap with a Jun 10–11 Monaco night, and Version A's Monaco night is Jun 8.</p>
+    <p><b>Adare Manor:</b> Manor House and spa closed Apr 30 – Sep 27, 2027 (Ryder Cup prep). Only the lodge golf package is bookable.</p>
+    <p><b>Nothing is booked.</b> Every price was checked live on Nov 21, 2026 for 2 adults and will move.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Made for Christoph &amp; Jennifer by Hazel · Checked Nov 21, 2026 · prices for 2 adults · nothing booked.</p>
+  <p>Map: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors · <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>.</p>
+  <details><summary>Photo credits (Wikimedia Commons)</summary><ul class="credits">{{CREDITS}}</ul>
+  <p class="muted">Photos are real Commons photos of each hotel or its town, resized for the web. Hotel photos are not from the hotels' own sites.</p></details>
+</footer>
+<script src="vendor/leaflet/leaflet.js" defer></script>
+<script src="map.js" defer></script>
+</body>
+</html>
