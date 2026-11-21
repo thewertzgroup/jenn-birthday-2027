@@ -142,3 +142,4 @@ a.plain{color:var(--accent);text-decoration:underline}
 .badge.todo{background:rgba(148,163,184,.18);color:#cbd5e1;border:1px solid rgba(148,163,184,.35)}
 .check{padding-left:1.3rem;line-height:1.55}.check>li{margin:.55rem 0}.check ul{margin:.3rem 0;padding-left:1.1rem}.check a{white-space:nowrap}
 .badge.mar{background:rgba(167,139,250,.18);color:#ddd6fe;border:1px solid rgba(167,139,250,.4)}
+.tipnote{margin:.5rem 0 0;font-size:.88rem;color:#cbd5e1;border-left:3px solid #fbbf24;padding:.3rem .55rem;background:rgba(251,191,36,.07);border-radius:.3rem}.tipt{min-width:640px}

@@ -43,28 +43,28 @@ DAYS = [
             '<span class="okline">Booked with United miles · confirmation PBWTSM · seats not selected yet.</span>'),
       price='168,000 miles + $234', sub='For both of you, both directions, economy, taxes and fees included',
       links=[]),
- dict(date='Thu Jun 3 – Sun Jun 6', place='Dublin · 3 nights', img='shelbourne', alt="The Shelbourne, St Stephen's Green, Dublin", img2='dublin', alt2="Ha'penny Bridge, Dublin", booked=True, bday=False,
+ dict(date='Thu Jun 3 – Sun Jun 6', place='Dublin · 3 nights', tip='Restaurants: check the bill for a service charge; if none, about 10%. Porter €2–3 a bag, housekeeping €2–5 a night.', img='shelbourne', alt="The Shelbourne, St Stephen's Green, Dublin", img2='dublin', alt2="Ha'penny Bridge, Dublin", booked=True, bday=False,
       body=("<b>The Shelbourne, Autograph Collection</b>, on St Stephen's Green, a short walk to Grafton Street and Trinity College. Guest room, 1 King. Platinum perks can apply (see below)."
             '<span class="okline">Booked on Bonvoy points · confirmation 73079619 · free cancellation until 11:59 pm Dublin time, Jun 2, 2027.</span>'),
       price='332,000 Bonvoy points', sub='$0 cash · 3 nights',
       brand='Autograph Collection',
       links=[(L['shel'],'The Shelbourne')]),
- dict(date='Sun Jun 6', place='Train + taxi to Ashford', img=None,
+ dict(date='Sun Jun 6', place='Train + taxi to Ashford', tip='Round up the taxis (add €2–5 for help with bags). No tip on the train.', img=None,
       body=('Taxi from The Shelbourne to Dublin Heuston (about 15 min). <b>Irish Rail 11:40 → Galway Ceannt 2:21 pm</b> (current Sunday timetable; backup 10:30 → 1:02 pm). '
             'One class only: there is no first class on the Galway line. Then a taxi to Ashford, about 45 min (Big O Taxis, +353 91 58 58 58), arriving about 3:15 pm for the 3 pm check-in.'
             '<span class="todo">Planned, not booked · rail sales open about Mar 8, 2027 (Irish Rail sells 90 days ahead).</span>'),
       price='≈ €130 (~$143)', sub='Estimates: taxi to Heuston ≈ €20 · train ≈ €40 for two (online fare) · taxi Galway → Ashford ≈ €60–75 (Ashford\'s chauffeur: €225)', links=[('https://www.irishrail.ie/en-ie/','Irish Rail'),('https://bigotaxis.com/','Big O Taxis')]),
- dict(date='Sun Jun 6 – Tue Jun 8', place='Ashford Castle · 2 nights · her birthday', img='ashford2', alt='Ashford Castle, Cong, County Mayo', img2='ashford', alt2='Ashford Castle from Lough Corrib', booked=True,
+ dict(date='Sun Jun 6 – Tue Jun 8', place='Ashford Castle · 2 nights · her birthday', tip='Check whether service is included in the package dinners; if not, about 10%. Porter €2–3 a bag, housekeeping €5 a night, concierge €10–20 for real help. Chauffeur to Knock: about 10% (€20–25).', img='ashford2', alt='Ashford Castle, Cong, County Mayo', img2='ashford', alt2='Ashford Castle from Lough Corrib', booked=True,
       body=('Junior Stateroom on the <b>A Taste of Ireland</b> package: a five-course dinner in the George V Dining Room, an Irish dinner in The Dungeon, afternoon tea, and breakfast both mornings. '
             'Birthday <b>Mon Jun 7</b> at the castle. The Spa is open daily 8 am–7 pm (treatments 9:30 am–6 pm).'
             '<span class="okline">Booked · deposit paid · free cancellation until May 23, 2027.</span>'),
       price='€7,120 (~$7,825)', sub='Total for two nights, taxes included', links=[(L['ashford'],'Ashford Castle'),(L['ashspa'],'The Spa')]),
- dict(date='Tue Jun 8 – Fri Jun 11', place='Knock → London · 3 nights', img='grosvenor', alt='Grosvenor House on Park Lane, London', img2='ic-parklane', alt2='InterContinental London Park Lane',
-      body='Taxi from Ashford about 10:30 am, reaching Knock about 11:30 (about 50 min; Ashford\'s chauffeur €225 via the concierge, or local taxi Michael Walsh, +353 86 395 3965, about €175). <b>Aer Lingus EI 916</b> 1:05 pm → Heathrow 2:30 pm, seats 7C and 7B, a 20 kg checked bag each included. <b>JW Marriott Grosvenor House</b> on Park Lane, facing Hyde Park. The hotel says its Executive Lounge is free for Platinum members.<span class="okline">Flight booked · Aer Lingus reference 2CUUB6 · Plus fare · €10 per person airport fee paid at Knock.</span><span class="okline">Hotel booked · confirmation 73083147 · free cancellation until 11:59 pm London time, Jun 7, 2027 (£632 fee after).</span>',
+ dict(date='Tue Jun 8 – Fri Jun 11', place='Knock → London · 3 nights', tip='Restaurants usually add 12.5% service: then nothing more. Black cabs: round up. Porter £1–2 a bag, housekeeping £2–5 a night, concierge £5–10 per request.', img='grosvenor', alt='Grosvenor House on Park Lane, London', img2='ic-parklane', alt2='InterContinental London Park Lane',
+      body='<b>Ashford Chauffeur</b> to Knock at about 10:30 am, arriving about 11:30 (about 50 min, €225, to book via the Ashford concierge, +353 94 954 5300). <b>Aer Lingus EI 916</b> 1:05 pm → Heathrow 2:30 pm, seats 7C and 7B, a 20 kg checked bag each included. <b>JW Marriott Grosvenor House</b> on Park Lane, facing Hyde Park. The hotel says its Executive Lounge is free for Platinum members.<span class="okline">Flight booked · Aer Lingus reference 2CUUB6 · Plus fare · €10 per person airport fee paid at Knock.</span><span class="okline">Hotel booked · confirmation 73083147 · free cancellation until 11:59 pm London time, Jun 7, 2027 (£632 fee after).</span>',
       price='€251 (~$275) + £1,919 (~$2,518)', sub='Flight €250.76 for two, plus €20 airport fee at Knock · hotel £1,919.40 for 3 nights, Superior 1 King, Member Flexible rate, may be charged at the hotel · non-Marriott alternate: InterContinental Park Lane (IHG)', hotelbooked=True, travelbooked=True,
       brand='JW Marriott',
       links=[(L['noc'],'Knock → LHR'),(L['grosv'],'Grosvenor House'),(L['icpl'],'InterContinental (alt)')]),
- dict(date='Fri Jun 11 – Sun Jun 13', place='Eurostar → Champagne · 2 nights in Reims', img='reims', alt='Reims Cathedral', img2='chanzy', alt2='La Caserne Chanzy, Reims',
+ dict(date='Fri Jun 11 – Sun Jun 13', place='Eurostar → Champagne · 2 nights in Reims', tip='Service is included (service compris): round up or leave a few euros. Cellar-tour guides: optional. No tip on Eurostar or TGV staff.', img='reims', alt='Reims Cathedral', img2='chanzy', alt2='La Caserne Chanzy, Reims',
       body=('<b>Eurostar 9024, 12:31 pm</b> St Pancras → Paris Nord 3:59 pm, coach 1, seats 17 and 18, then a 5-minute walk to Paris Est and the TGV to Reims (about 45 min). '
             '<b>La Caserne Chanzy Hotel &amp; Spa, Autograph Collection</b>, a converted fire station facing the cathedral, with a spa. '
             'Sat Jun 12 is for the champagne houses: cellars in Reims, or the train to Épernay (about 25 min) for the Avenue de Champagne.'
@@ -73,7 +73,7 @@ DAYS = [
       price='$273 + ≈$100 + €639 (~$702)', sub='Eurostar Plus £208 for two, booked · Paris → Reims TGV 1st class ≈ $100, estimate, not booked yet · hotel €639.20 for 2 nights, Chanzy Guest Room 1 King, courtyard, Member Flexible rate', hotelbooked=True, eurobooked=True,
       brand='Autograph Collection',
       links=[(L['es11'],'Eurostar Jun 11'),(L['chanzy'],'La Caserne Chanzy'),(L['royalch'],'Royal Champagne (alt)')]),
- dict(date='Sun Jun 13 – Wed Jun 16', place='TGV → Nice · 3 nights on the Riviera', img='nice', alt='Promenade des Anglais, Nice', img2='tgv', alt2='TGV at Nice-Ville',
+ dict(date='Sun Jun 13 – Wed Jun 16', place='TGV → Nice · 3 nights on the Riviera', tip='Service compris: leave €1–2 each at casual meals, 5–10% for special service. Taxis: round up. Porter €1–2 a bag, housekeeping €3–5 a night.', img='nice', alt='Promenade des Anglais, Nice', img2='tgv', alt2='TGV at Nice-Ville',
       body=('Train all the way: Reims → Paris Est (45 min), metro to Gare de Lyon, then a direct <b>TGV INOUI to Nice</b> (about 5 h 40 min). Door to door is about 7–8 hours. '
             'There is no direct train from Champagne-Ardenne TGV or Marne-la-Vallée to Nice; those routes change once or twice too. '
             '<b>First class is recommended</b> for this long leg: it\'s about $140 more for two (estimate). '
@@ -97,14 +97,14 @@ def card(d):
     if d.get('brand'): badge += f'<span class="badge mar">Marriott Bonvoy · {d["brand"]}</span>'
     links = ''.join(a(h, t) for h, t in d['links'])
     return (f'<article class="day{cls}">{media}<div class="day-body"><p class="date">{d["date"]}</p>{badge}<h3>{d["place"]}</h3>'
-            f'<p>{d["body"]}</p><p class="price">{d["price"]}<small>{d["sub"]}</small></p><div class="links">{links}</div></div></article>')
+            f'<p>{d["body"]}</p>' + (f'<p class="tipnote">💶 Tips: {d["tip"]}</p>' if d.get('tip') else '') + f'<p class="price">{d["price"]}<small>{d["sub"]}</small></p><div class="links">{links}</div></div></article>')
 
 ITEMS = [('Flights SFO → Dublin / Nice → SFO · booked, PBWTSM (168,000 United miles + taxes)', 234, 'booked'), ('Dublin, 3 nights · The Shelbourne · booked, 73079619 (332,000 Bonvoy points)', 0, 'booked'),
-         ('Train + taxis Dublin → Ashford, Jun 6 (estimate, ≈ €130)', 143, 'est'), ('Taxi Ashford → Knock, Jun 8 (estimate, ≈ €175)', 192, 'est'), ('Ashford Castle, 2 nights · booked (dinners included)', 7825, 'booked'),
+         ('Train + taxis Dublin → Ashford, Jun 6 (estimate, ≈ €130)', 143, 'est'), ('Ashford Chauffeur → Knock, Jun 8 (€225, to book via concierge)', 247, ''), ('Ashford Castle, 2 nights · booked (dinners included)', 7825, 'booked'),
          ('Knock → Heathrow · booked, Aer Lingus 2CUUB6 (€250.76, bags included)', 275, 'booked'), ('Knock airport fee, €10 each, paid at the airport', 22, 'booked'), ('United seats, all flights · booked', 123, 'booked'), ('London, 3 nights · Grosvenor House · booked, 73083147 (£1,919.40)', 2518, 'booked'),
          ('Eurostar Plus London → Paris · booked, 2XNKM6 (£208)', 273, 'booked'), ('TGV Paris → Reims, 1st class (estimate)', 100, 'est'), ('Reims, 2 nights · La Caserne Chanzy · booked, 73084366 (€639.20)', 702, 'booked'),
          ('TGV Reims → Paris → Nice, 1st class (estimate)', 400, 'est'), ('Nice, 3 nights · Le Méridien Nice · booked, 73085131 (€1,722.88)', 1892, 'booked'),
-         ('Checked bags, 1 each, United and SWISS flights (estimate)', 240, 'est')]
+         ('Checked bags, 1 each, United and SWISS flights (estimate)', 240, 'est'), ('Tips, whole trip (estimate, see Tipping)', 500, 'est')]
 TOT = sum(v for _, v, _ in ITEMS)
 rows = ''.join(f'<tr class="{c}"><td>{k}</td><td>${v:,}</td></tr>' for k, v, c in ITEMS)
 eco_lo, eco_hi = TOT + 2750, TOT + 4400
@@ -118,10 +118,10 @@ OROWS = [
  ('Flights', ['$654: United miles booking $234 + seats $123 + Aer Lingus Knock–Heathrow $297 incl. airport fee (all booked)', '$1,974: Porter via Toronto $1,802 + Knock–Heathrow $172', '$2,458: Aer Lingus nonstop $2,037 + two short flights $421']),
  ('Trains', ['$773: Eurostar Plus $273 (booked) + TGV 1st ≈ $500 (estimate)', '$878: Eurostar Plus $378 (live) + TGV 1st ≈ $500 (estimate)', '–']),
  ('Hotels', ['$12,937 cash + 332,000 Bonvoy points (all booked)', '$12,481', '$14,570']),
- ('Bags + Ireland transfers (estimates)', ['$575', '$670', '$410 + car (not priced)']),
+ ('Bags, Ireland transfers + tips', ['$1,130 (tips $500, estimate)', '$670', '$410 + car (not priced)']),
  ('Food (estimate)', ['$2,750–4,400 (11 days)', '$2,000–3,200 (8 days)', '$3,250–5,200']),
- ('All in', ['<b>$17,689–19,339</b> + 168,000 miles + 332,000 points', '<b>$18,003–19,203</b>', '<b>$20,688–22,638</b> + car']),
- ('vs $20k', ['Under, by $650–2,300 (cash)', 'Under, by $800–2,000', 'Over, plus the car']),
+ ('All in', ['<b>$18,244–19,894</b> + 168,000 miles + 332,000 points', '<b>$18,003–19,203</b>', '<b>$20,688–22,638</b> + car']),
+ ('vs $20k', ['Under, by $100–1,750 (cash)', 'Under, by $800–2,000', 'Over, plus the car']),
 ]
 orders = '<tr><th></th>' + ''.join(f'<th>{c}</th>' for c in OCOLS) + '</tr>' + ''.join(
   f'<tr><th>{k}</th>' + ''.join(f'<td>{v}</td>' for v in vals) + '</tr>' for k, vals in OROWS)

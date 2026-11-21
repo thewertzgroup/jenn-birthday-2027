@@ -12,7 +12,7 @@
 <title>Jenn's Birthday Trip · June 2027</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="style.css?v=18">
+<link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 <header class="hero">
@@ -27,7 +27,7 @@
 </header>
 
 <nav class="toc" aria-label="Sections">
-  <a href="#plan">Day by day</a><a href="#map">Map</a><a href="#totals">Totals</a><a href="#book">Booking checklist</a><a href="#orders">Compare</a><a href="#perks">Marriott perks</a><a href="#know">Good to know</a>
+  <a href="#plan">Day by day</a><a href="#map">Map</a><a href="#totals">Totals</a><a href="#book">Booking checklist</a><a href="#tips">Tipping</a><a href="#orders">Compare</a><a href="#perks">Marriott perks</a><a href="#know">Good to know</a>
 </nav>
 
 <main class="page">
@@ -35,7 +35,7 @@
 <section class="summary">
   <div class="stat"><span>13 nights</span><small>in Europe · Thu Jun 3 – Wed Jun 16</small></div>
   <div class="stat"><span>3 countries</span><small>Ireland · UK · France</small></div>
-  <div class="stat"><span>≈ {{TOTAL}}</span><small>flights, trains, hotels, bags &amp; taxis, before food</small></div>
+  <div class="stat"><span>≈ {{TOTAL}}</span><small>flights, trains, hotels, bags, transfers &amp; tips, before food</small></div>
   <div class="stat"><span>$20k</span><small>Benchmark</small></div>
 </section>
 
@@ -65,11 +65,11 @@
   <p><b>Food:</b> estimate $250–400 a day for two, 11 days ($2,750–4,400). Ashford's package already covers its dinners and breakfasts.
   <b>Car:</b> only for Dublin → Ashford → Knock, an estimate.</p>
   <div class="cabins">
-    <div class="cab"><h3>All in, economy</h3><p class="price">{{ECO_LO}}–{{ECO_HI}}</p><p class="muted">flights, trains, hotels, bags, taxis and food · $650–2,300 under the $20k benchmark in cash, plus 168,000 United miles and 332,000 Bonvoy points</p></div>
+    <div class="cab"><h3>All in, economy</h3><p class="price">{{ECO_LO}}–{{ECO_HI}}</p><p class="muted">flights, trains, hotels, bags, transfers, tips and food · $100–1,750 under the $20k benchmark in cash, plus 168,000 United miles and 332,000 Bonvoy points</p></div>
   </div>
   <p class="muted"><b>Economy only.</b> Google Flights shows the cheapest fare type and doesn't say whether it's Basic or Standard. Before booking, compare the airline's Standard fare (seat choice, changes, sometimes a bag). If it's only a little more, take it. <b>Trains in first class:</b> Eurostar Plus is £52 more than Standard for two on the 12:31 pm (live), and first class on the 6-hour TGV is about $140 more than second (estimate). Both gaps are small, so the plan uses first.</p>
   <p class="muted">Ways to trim: The College Green Hotel or the InterContinental in Dublin, St. Pancras in London, AC Hotel Nice, or Standard class on both trains (saves about $210).</p>
-  <p class="muted">Sources: Google Flights and Google Hotels (nightly price with fees, 2 adults), hotels' own rates where shown, checked {{CHECKED}}. Eurostar: eurostar.com, live. SNCF Connect blocked automated checks, and June 2027 French domestic fares aren't on sale yet, so TGV fares are estimates. Ashford: booking confirmation. Food, bags, Irish rail and taxis are estimates.</p>
+  <p class="muted">Sources: Google Flights and Google Hotels (nightly price with fees, 2 adults), hotels' own rates where shown, checked {{CHECKED}}. Eurostar: eurostar.com, live. SNCF Connect blocked automated checks, and June 2027 French domestic fares aren't on sale yet, so TGV fares are estimates. Ashford: booking confirmation. Food, bags, tips, Irish rail and taxis are estimates. Ashford chauffeur: €225, Ashford Castle's published price.</p>
 </section>
 
 <section id="book" class="panel">
@@ -90,7 +90,7 @@
     <li><b>To do before the trip: add passports to Eurostar 2XNKM6</b> (Advance Passenger Information). <a href="https://www.eurostar.com/uk-en/manage-booking" target="_blank" rel="noopener">Manage booking</a></li>
     <li><b>TGV</b> Paris Est → Reims (Jun 11) and Reims → Paris → Nice (Sun Jun 13), first class, when sales open. French trains usually open a few months ahead. <a href="{{L_sncf}}" target="_blank" rel="noopener">SNCF Connect</a></li>
     <li><b>Irish Rail</b> Dublin Heuston 11:40 → Galway Ceannt, Sun Jun 6, when sales open (90 days ahead, about Mar 8, 2027). Standard class only. <a href="https://www.irishrail.ie/en-ie/" target="_blank" rel="noopener">irishrail.ie</a></li>
-    <li><b>Taxis</b>: Galway Ceannt → Ashford on Jun 6 (Big O Taxis, +353 91 58 58 58, <a href="https://bigotaxis.com/" target="_blank" rel="noopener">bigotaxis.com</a>), and Ashford → Knock on Jun 8 at about 10:30 am (ask the Ashford concierge, +353 94 954 5300: their chauffeur is €225; or Michael Walsh taxi, +353 86 395 3965). The Shelbourne → Heuston taxi can be hailed on the day.</li>
+    <li><b>Taxis</b>: Galway Ceannt → Ashford on Jun 6 (Big O Taxis, +353 91 58 58 58, <a href="https://bigotaxis.com/" target="_blank" rel="noopener">bigotaxis.com</a>), and the <b>Ashford Chauffeur</b> to Knock on Jun 8 at about 10:30 am, €225, to book via the Ashford concierge (+353 94 954 5300, concierge@ashfordcastle.com). The Shelbourne → Heuston taxi can be hailed on the day.</li>
   </ol>
   <p class="muted">Ashford Castle: booked, deposit paid, free cancellation until May 23, 2027.</p>
 </section>
@@ -101,6 +101,23 @@
   <div class="scroll"><table class="cmp">{{ORDERS}}</table></div>
   <p><b>Why 3-2-3-2-3:</b> no rushed stops, and every move is one simple step (drive, short flight, Eurostar, TGV). With the flights on miles and The Shelbourne on points, the cash total is under the $20k benchmark (the comparison columns are priced in cash).</p>
   <p class="muted">Champagne options: La Caserne Chanzy, Autograph Collection (Marriott, Reims) $295/night · luxury: Royal Champagne Hotel &amp; Spa $1,242/night · Domaine Les Crayères $1,282/night.</p>
+</section>
+
+<section id="tips" class="panel">
+  <h2>Tipping</h2>
+  <p class="muted">Tipping is optional in all three countries and smaller than at home. Always check the bill for a service charge first, and carry a little cash: tips added on the card machine don't always reach the person.</p>
+  <div class="scroll"><table class="cmp tipt">
+    <tr><th></th><th>Ireland</th><th>UK (London)</th><th>France (Reims, Nice)</th></tr>
+    <tr><th>Restaurants</th><td>If no service charge: about 10% (12.5% is generous). If 10–12.5% service is on the bill: nothing more.</td><td>Usually 12.5% service already added: nothing more. If not: 10–12.5%.</td><td>Service compris by law: round up, €1–2 each at casual meals, 5–10% for fine dining.</td></tr>
+    <tr><th>Taxis</th><td>Round up; €2–5 on an airport run or help with bags</td><td>Round up to the pound</td><td>Round up (up to 5%)</td></tr>
+    <tr><th>Chauffeur / private car</th><td colspan="3">About 10% (Ashford → Knock: €20–25)</td></tr>
+    <tr><th>Porters</th><td>€2–3 a bag</td><td>£1–2 a bag</td><td>€1–2 a bag</td></tr>
+    <tr><th>Housekeeping</th><td>€2–5 a night, with a note</td><td>£2–5 a night</td><td>€3–5 a night</td></tr>
+    <tr><th>Concierge</th><td colspan="3">€/£10–20 only for real help (a hard booking, sorting a problem); nothing for directions</td></tr>
+    <tr><th>Bars, trains</th><td colspan="3">No tip at the bar or for train staff (Eurostar, TGV, Irish Rail)</td></tr>
+  </table></div>
+  <p><b>Budget: about $500 for the trip</b> (estimate, in the totals): restaurant tips where service isn't included about $250, housekeeping about $65 (13 nights), porters about $65, concierge about $40, Ashford dinners about $45, chauffeur about $25, taxi round-ups about $15.</p>
+  <p class="muted">Sources: <a href="https://www.visitlondon.com/traveller-information/essential-information/money/tipping" target="_blank" rel="noopener">Visit London</a> (2026), <a href="https://www.afar.com/magazine/when-and-how-much-to-tip-in-france" target="_blank" rel="noopener">AFAR</a> (Feb 2026), <a href="https://www.economie.gouv.fr/dgccrf/Publications/Vie-pratique/Fiches-pratiques/Pourboire" target="_blank" rel="noopener">French government (DGCCRF)</a>, <a href="https://theirelandedit.com/notebook/essays/tipping-restaurants-ireland" target="_blank" rel="noopener">The Ireland Edit</a> (Jul 2026).</p>
 </section>
 
 <section id="perks" class="panel perks">
@@ -135,6 +152,6 @@
   <p class="muted">Real Commons photos of each hotel or its town, resized for the web.</p></details>
 </footer>
 <script src="vendor/leaflet/leaflet.js" defer></script>
-<script src="map.js?v=18" defer></script>
+<script src="map.js?v=19" defer></script>
 </body>
 </html>
