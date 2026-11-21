@@ -12,7 +12,7 @@
 <title>Jenn's Birthday Trip · June 2027</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header class="hero">
@@ -81,6 +81,7 @@
   <div class="map-toggle" role="group" aria-label="Which route">
     <button type="button" data-route="B" aria-pressed="true">Version B</button>
     <button type="button" data-route="A" aria-pressed="false">Version A</button>
+    <button type="button" id="zoom-ie" class="ghost">Zoom to Ireland</button>
   </div>
   <div id="leaflet" role="img" aria-label="Map of the trip route"></div>
   <p class="muted legend"><span class="sw drive"></span> drive &nbsp; <span class="sw fly"></span> fly &nbsp; ★ birthday night</p>
@@ -177,6 +178,6 @@
   <p class="muted">Photos are real Commons photos of each hotel or its town, resized for the web. Hotel photos are not from the hotels' own sites.</p></details>
 </footer>
 <script src="vendor/leaflet/leaflet.js" defer></script>
-<script src="map.js" defer></script>
+<script src="map.js?v=5" defer></script>
 </body>
 </html>
