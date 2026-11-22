@@ -40,7 +40,7 @@ DAYS = [
  dict(date='Wed Jun 2', place='Fly SFO → Dublin', img='plane', alt='Airliner on approach', booked=True, bday=False,
       body=('United UA 2391 SFO 1:10 pm → Washington Dulles 9:27 pm, then UA 228 at 11:05 pm → Dublin 11:10 am Thursday. '
             'Home Wed Jun 16 on SWISS: LX 565 Nice 10:50 am → Zurich 12:05 pm, LX 38 Zurich 1:15 pm → SFO 4:15 pm.'
-            '<span class="okline">Booked with United miles · confirmation PBWTSM · seats not selected yet.</span>'),
+            '<span class="okline">Booked with United miles · confirmation PBWTSM · seats: UA 2391 34C/34B, UA 228 36C/36B, LX 565 15C/15A (aisle + window, middle seat between; paid $36), LX 38 40C/40B.</span>'),
       price='168,000 miles + $234', sub='For both of you, both directions, economy, taxes and fees included',
       links=[]),
  dict(date='Thu Jun 3 – Sun Jun 6', place='Dublin · 3 nights', tip='Restaurants: check the bill for a service charge; if none, about 10%. Porter €2–3 a bag, housekeeping €2–5 a night.', img='shelbourne', alt="The Shelbourne, St Stephen's Green, Dublin", img2='dublin', alt2="Ha'penny Bridge, Dublin", booked=True, bday=False,
@@ -82,7 +82,7 @@ DAYS = [
       price='≈$400 + €1,723 (~$1,892)', sub='TGV 1st class for two ≈ $400, estimate (2nd ≈ $260); June 2027 French fares aren\'t on sale yet · hotel €1,722.88 for 3 nights, Classic 1 King, courtyard, Member Flexible rate', hotelbooked=True,
       brand='Le Méridien',
       links=[(L['sncf'],'SNCF Connect'),(L['lmnice'],'Le Méridien Nice'),(L['lmbp'],'Beach Plaza Monaco'),(L['negresco'],'Le Negresco (alt)')]),
- dict(date='Wed Jun 16', place='Fly Nice → SFO', img=None, body='SWISS LX 565 Nice 10:50 am → Zurich 12:05 pm, LX 38 Zurich 1:15 pm → SFO 4:15 pm. Booked, PBWTSM.', price='booked', sub='in the United miles booking above', links=[], nob=True),
+ dict(date='Wed Jun 16', place='Fly Nice → SFO', img=None, body='SWISS LX 565 Nice 10:50 am → Zurich 12:05 pm, LX 38 Zurich 1:15 pm → SFO 4:15 pm. Booked, PBWTSM. Seats: LX 565 15C aisle (Christoph) and 15A window (Jennifer), paid $36; LX 38 40C/40B.', price='booked', sub='in the United miles booking above', links=[], nob=True),
 ]
 def card(d):
     cls = ' star' if d.get('booked') and d.get('bday') is not False else ''
@@ -101,7 +101,7 @@ def card(d):
 
 ITEMS = [('Flights SFO → Dublin / Nice → SFO · booked, PBWTSM (168,000 United miles + taxes)', 234, 'booked'), ('Dublin, 3 nights · The Shelbourne · booked, 73079619 (332,000 Bonvoy points)', 0, 'booked'),
          ('Train + taxis Dublin → Ashford, Jun 6 (estimate, ≈ €130)', 143, 'est'), ('Ashford Chauffeur → Knock, Jun 8 (€225, to book via concierge)', 247, ''), ('Ashford Castle, 2 nights · booked (dinners included)', 7825, 'booked'),
-         ('Knock → Heathrow · booked, Aer Lingus 2CUUB6 (€250.76, bags included)', 275, 'booked'), ('Knock airport fee, €10 each, paid at the airport', 22, 'booked'), ('United seats, all flights · booked', 123, 'booked'), ('London, 3 nights · Grosvenor House · booked, 73083147 (£1,919.40)', 2518, 'booked'),
+         ('Knock → Heathrow · booked, Aer Lingus 2CUUB6 (€250.76, bags included)', 275, 'booked'), ('Knock airport fee, €10 each, paid at the airport', 22, 'booked'), ('United seats · booked', 123, 'booked'), ('SWISS LX 565 seats 15A/15C · booked', 36, 'booked'), ('London, 3 nights · Grosvenor House · booked, 73083147 (£1,919.40)', 2518, 'booked'),
          ('Eurostar Plus London → Paris · booked, 2XNKM6 (£208)', 273, 'booked'), ('TGV Paris → Reims, 1st class (estimate)', 100, 'est'), ('Reims, 2 nights · La Caserne Chanzy · booked, 73084366 (€639.20)', 702, 'booked'),
          ('TGV Reims → Paris → Nice, 1st class (estimate)', 400, 'est'), ('Nice, 3 nights · Le Méridien Nice · booked, 73085131 (€1,722.88)', 1892, 'booked'),
          ('Checked bags, 1 each, United and SWISS flights (estimate)', 240, 'est'), ('Tips, whole trip (estimate, see Tipping)', 500, 'est')]
@@ -115,13 +115,13 @@ OROWS = [
  ('Dates', ['Wed Jun 2 – Wed Jun 16', 'Thu Jun 3 – Mon Jun 14', 'Sat May 29 – Sun Jun 13']),
  ('Nights in Europe', ['13', '10', '14']),
  ('Stops', ['Dublin 3 · Ashford 2 · London 3 · Reims 2 · Nice 3', 'Dublin 2 · Ashford 2 · London 2 · Reims 2 · Nice 2', 'Dublin 4 · Kerry 3 · Ashford 2 · London 2 · Nice 3']),
- ('Flights', ['$654: United miles booking $234 + seats $123 + Aer Lingus Knock–Heathrow $297 incl. airport fee (all booked)', '$1,974: Porter via Toronto $1,802 + Knock–Heathrow $172', '$2,458: Aer Lingus nonstop $2,037 + two short flights $421']),
+ ('Flights', ['$690: United miles booking $234 + seats $123 + LX 565 seats $36 + Aer Lingus Knock–Heathrow $297 incl. airport fee (all booked)', '$1,974: Porter via Toronto $1,802 + Knock–Heathrow $172', '$2,458: Aer Lingus nonstop $2,037 + two short flights $421']),
  ('Trains', ['$773: Eurostar Plus $273 (booked) + TGV 1st ≈ $500 (estimate)', '$878: Eurostar Plus $378 (live) + TGV 1st ≈ $500 (estimate)', '–']),
  ('Hotels', ['$12,937 cash + 332,000 Bonvoy points (all booked)', '$12,481', '$14,570']),
  ('Bags, Ireland transfers + tips', ['$1,130 (tips $500, estimate)', '$670', '$410 + car (not priced)']),
  ('Food (estimate)', ['$2,750–4,400 (11 days)', '$2,000–3,200 (8 days)', '$3,250–5,200']),
- ('All in', ['<b>$18,244–19,894</b> + 168,000 miles + 332,000 points', '<b>$18,003–19,203</b>', '<b>$20,688–22,638</b> + car']),
- ('vs $20k', ['Under, by $100–1,750 (cash)', 'Under, by $800–2,000', 'Over, plus the car']),
+ ('All in', ['<b>$18,280–19,930</b> + 168,000 miles + 332,000 points', '<b>$18,003–19,203</b>', '<b>$20,688–22,638</b> + car']),
+ ('vs $20k', ['Under, by $70–1,720 (cash)', 'Under, by $800–2,000', 'Over, plus the car']),
 ]
 orders = '<tr><th></th>' + ''.join(f'<th>{c}</th>' for c in OCOLS) + '</tr>' + ''.join(
   f'<tr><th>{k}</th>' + ''.join(f'<td>{v}</td>' for v in vals) + '</tr>' for k, vals in OROWS)
